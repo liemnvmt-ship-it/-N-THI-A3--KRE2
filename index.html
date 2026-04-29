@@ -57,7 +57,7 @@ body { font-family: Arial; max-width: 800px; margin: auto; }
 <div id="menu">
   <h3>Chọn chế độ làm bài</h3>
   <button onclick="startQuiz(60)">📝 Làm 60 câu</button>
-  <button onclick="startQuiz(280)">📚 Làm 299 câu</button>
+  <button onclick="startQuiz(280)">📚 Làm 343 câu</button>
 </div>
 
 <!-- PANEL -->
@@ -553,11 +553,11 @@ let originalQuiz = [
 },
 {
   q: "Thao tác xa đối với bước thao tác không quá 03 bước hoặc thực hiện tại các cấp điều độ có quyền điều khiển:",
-  A: "Thao tác xa có số bước thao tác không quá 03 bước...",
-  B: "Thực hiện tại trung tâm điều khiển hoặc tại bảng điều khiển xa...",
-  C: "Thao tác xa đối với bước thao tác bằng 4 bước...",
-  D: "Cả A và B đều đúng.",
-  correct: "A"
+  A: "a.Thao tác xa có số bước thao tác không quá 03 bước...",
+  B: "b.Thực hiện tại trung tâm điều khiển hoặc tại bảng điều khiển xa...",
+  C: "c.Thao tác xa đối với bước thao tác bằng 4 bước...",
+  D: "d.Cả a và b đều đúng.",
+  correct: "D"
 },
 {
   q: "Trong đêm đầu tiên phải đảm bảo điều gì đối với việc truyền dữ liệu của các nhà máy, trạm biến áp và thiết bị tự động kết nối liên lạc với hệ thống SCADA?",
@@ -569,18 +569,18 @@ let originalQuiz = [
 },
 {
   q: "Nội dung nào sau đây là đúng về trách nhiệm của đơn vị phát điện tham gia vận hành hệ thống điện quốc gia?",
-  A: "Hàng năm phải tổ chức tập huấn sự cố và diễn tập phòng chống cháy nổ ít nhất 1 lần.",
-  B: "Phải thực hiện đúng các lệnh điều độ.",
-  C: "Phương án B đúng.",
-  D: "Cả A và B đều đúng.",
+  A: "a.Hàng năm phải tổ chức tập huấn sự cố và diễn tập phòng chống cháy nổ ít nhất 1 lần.",
+  B: "b.Phải thực hiện đúng các lệnh điều độ.",
+  C: "c.Phương án B đúng.",
+  D: "d.Cả A và B đều đúng.",
   correct: "D"
 },
 {
   q: "Máy biến áp hoặc thiết bị điện mới trước khi đưa vào vận hành phải được:",
-  A: "Kiểm tra các thông số kỹ thuật.",
-  B: "Thí nghiệm, nghiệm thu đạt tiêu chuẩn vận hành.",
-  C: "Có đầy đủ hồ sơ kỹ thuật.",
-  D: "Tất cả các phương án trên.",
+  A: "a.Kiểm tra các thông số kỹ thuật.",
+  B: "b.Thí nghiệm, nghiệm thu đạt tiêu chuẩn vận hành.",
+  C: "c.Có đầy đủ hồ sơ kỹ thuật.",
+  D: "d.Tất cả các phương án trên.",
   correct: "D"
 },
 {
@@ -593,26 +593,26 @@ let originalQuiz = [
 },
 {
   q: "Nhân viên vận hành phải được đào tạo, kiểm tra và diễn tập xử lý sự cố:",
-  A: "Theo định kỳ hàng năm.",
-  B: "Ít nhất mỗi năm một lần.",
-  C: "Ít nhất hai năm một lần.",
-  D: "Cả A và B đều đúng.",
+  A: "a.Theo định kỳ hàng năm.",
+  B: "b.Ít nhất mỗi năm một lần.",
+  C: "c.Ít nhất hai năm một lần.",
+  D: "d.Cả a và b đều đúng.",
   correct: "B"
 },
 {
   q: "Phương án nào sau đây được dùng để tránh ngăn ngừa sự cố lan rộng?",
-  A: "Sa thải phụ tải.",
-  B: "Tách đảo hệ thống.",
-  C: "Cấp điện kịp thời.",
-  D: "Tất cả các phương án trên.",
+  A: "a.Sa thải phụ tải.",
+  B: "b.Tách đảo hệ thống.",
+  C: "c.Cấp điện kịp thời.",
+  D: "d.Tất cả các phương án trên.",
   correct: "D"
 },
 {
   q: "Người giám sát và người thực hiện thao tác phải làm gì khi thực hiện lệnh thao tác?",
-  A: "Đọc kỹ lệnh, nhắc lại lệnh để đảm bảo hiểu đúng.",
-  B: "Ghi vào phiếu thao tác.",
-  C: "Thực hiện ngay lập tức không cần kiểm tra.",
-  D: "Cả A và B đều đúng.",
+  A: "a.Đọc kỹ lệnh, nhắc lại lệnh để đảm bảo hiểu đúng.",
+  B: "b.Ghi vào phiếu thao tác.",
+  C: "c.Thực hiện ngay lập tức không cần kiểm tra.",
+  D: "d.Cả a và b đều đúng.",
   correct: "D"
 },
 {
@@ -697,10 +697,10 @@ let originalQuiz = [
 },
 {
   q: "Khi nhận lệnh thao tác từ Điều độ viên, nhân viên vận hành phải:",
-  A: "Nhắc lại nguyên văn lệnh đó.",
-  B: "Ghi vào sổ nhật ký và phiếu thao tác.",
-  C: "Thực hiện ngay mà không cần hỏi lại.",
-  D: "Cả A và B đều đúng.",
+  A: "a.Nhắc lại nguyên văn lệnh đó.",
+  B: "b.Ghi vào sổ nhật ký và phiếu thao tác.",
+  C: "c.Thực hiện ngay mà không cần hỏi lại.",
+  D: "d.Cả a và b đều đúng.",
   correct: "D"
 },
 {
@@ -721,10 +721,10 @@ let originalQuiz = [
 },
 {
   q: "Các cấp điều độ trong hệ thống điện Việt Nam bao gồm:",
-  A: "Điều độ Quốc gia (A0), Điều độ miền (A1, A2, A3).",
-  B: "Điều độ miền và Điều độ phân phối.",
-  C: "Cả A và B đều đúng.",
-  D: "Chỉ có Điều độ Quốc gia.",
+  A: "a.Điều độ Quốc gia (A0), Điều độ miền (A1, A2, A3).",
+  B: "b.Điều độ miền và Điều độ phân phối.",
+  C: "c.Cả a và b đều đúng.",
+  D: "d.Chỉ có Điều độ Quốc gia.",
   correct: "C"
 },
 {
@@ -753,10 +753,10 @@ let originalQuiz = [
 },
 {
   q: "Mục đích của việc diễn tập xử lý sự cố hàng năm là:",
-  A: "Nâng cao kỹ năng và sự phối hợp của nhân viên vận hành.",
-  B: "Kiểm tra tính sẵn sàng của thiết bị.",
-  C: "Đáp ứng yêu cầu của cơ quan quản lý.",
-  D: "Cả A và B đều đúng.",
+  A: "a.Nâng cao kỹ năng và sự phối hợp của nhân viên vận hành.",
+  B: "b.Kiểm tra tính sẵn sàng của thiết bị.",
+  C: "c.Đáp ứng yêu cầu của cơ quan quản lý.",
+  D: "d.Cả a và b đều đúng.",
   correct: "D"
 },
 {
@@ -873,10 +873,10 @@ let originalQuiz = [
 },
 {
   q: "Trường hợp nào được phép thao tác mà không cần Phiếu thao tác?",
-  A: "Xử lý sự cố khẩn cấp để cứu người hoặc ngăn chặn cháy nổ.",
-  B: "Đóng cắt các dao cách ly tiếp địa.",
-  C: "Thao tác đơn giản chỉ có 1 bước.",
-  D: "Cả A và C đều đúng.",
+  A: "a.Xử lý sự cố khẩn cấp để cứu người hoặc ngăn chặn cháy nổ.",
+  B: "b.Đóng cắt các dao cách ly tiếp địa.",
+  C: "c.Thao tác đơn giản chỉ có 1 bước.",
+  D: "d.Cả a và c đều đúng.",
   correct: "D"
 },
 {
@@ -889,10 +889,10 @@ let originalQuiz = [
 },
 {
   q: "Một thiết bị điện được coi là có điện khi:",
-  A: "Đang vận hành bình thường.",
-  B: "Đã cắt điện nhưng chưa làm tiếp địa an toàn.",
-  C: "Có biển báo \"Thiết bị có điện\".",
-  D: "Cả A và B đều đúng.",
+  A: "a.Đang vận hành bình thường.",
+  B: "b.Đã cắt điện nhưng chưa làm tiếp địa an toàn.",
+  C: "c.Có biển báo \"Thiết bị có điện\".",
+  D: "d.Cả a và b đều đúng.",
   correct: "D"
 },
 {
@@ -929,10 +929,10 @@ let originalQuiz = [
 },
 {
   q: "Khi mất liên lạc với Điều độ viên trong lúc đang xử lý sự cố, Trưởng ca phải:",
-  A: "Ngừng mọi thao tác.",
-  B: "Tiếp tục xử lý theo quy trình xử lý sự cố tại chỗ.",
-  C: "Tìm mọi cách khôi phục liên lạc.",
-  D: "Cả B và C đều đúng.",
+  A: "a.Ngừng mọi thao tác.",
+  B: "b.Tiếp tục xử lý theo quy trình xử lý sự cố tại chỗ.",
+  C: "c.Tìm mọi cách khôi phục liên lạc.",
+  D: "d.Cả a và c đều đúng.",
   correct: "D"
 },
 {
@@ -993,18 +993,18 @@ let originalQuiz = [
 },
 {
   q: "Thiết bị nào dùng để ngăn ngừa hiện tượng quá điện áp nội bộ khi thao tác?",
-  A: "Chống sét van (LA).",
-  B: "Kháng điện.",
-  C: "Tụ điện.",
-  D: "Cả A và B đều đúng.",
+  A: "a.Chống sét van (LA).",
+  B: "b.Kháng điện.",
+  C: "c.Tụ điện.",
+  D: "d.Cả a và b đều đúng.",
   correct: "D"
 },
 {
   q: "Khi thay đổi trị số cài đặt rơ le bảo vệ, phải có:",
-  A: "Phiếu chỉnh định của cấp có thẩm quyền.",
-  B: "Lệnh của Trưởng ca.",
-  C: "Biên bản nghiệm thu sau khi thay đổi.",
-  D: "Cả A và C đều đúng.",
+  A: "a.Phiếu chỉnh định của cấp có thẩm quyền.",
+  B: "b.Lệnh của Trưởng ca.",
+  C: "c.Biên bản nghiệm thu sau khi thay đổi.",
+  D: "d.Cả a và c đều đúng.",
   correct: "D"
 },
 {
@@ -1033,10 +1033,10 @@ let originalQuiz = [
 },
 {
   q: "Theo Thông tư 06/2025/TT-BCT: Xử lý của nhân viên vận hành tại nhà máy điện khi máy biến áp nhảy sự cố",
-  A: "Phương án (b), (c)",
-  B: "Báo cáo kịp thời, chính xác hiện tượng và diễn biến sự cố cho Lãnh đạo trực tiếp",
-  C: "Xử lý sự cố máy biến áp theo Quy trình vận hành và xử lý sự cố máy biến áp do Đơn vị quản lý vận hành ban hành",
-  D: "Báo cáo thông tin sự cố cho Cấp điều độ có quyền điều khiển",
+  A: "a.Phương án (b), (c)",
+  B: "b.Báo cáo kịp thời, chính xác hiện tượng và diễn biến sự cố cho Lãnh đạo trực tiếp",
+  C: "c.Xử lý sự cố máy biến áp theo Quy trình vận hành và xử lý sự cố máy biến áp do Đơn vị quản lý vận hành ban hành",
+  D: "d.Báo cáo thông tin sự cố cho Cấp điều độ có quyền điều khiển",
   correct: "A"
 },
 {
@@ -1089,10 +1089,10 @@ let originalQuiz = [
 },
 {
   q: "Theo Thông tư 05/2025/TT-BCT: Khách hàng sử dụng lưới điện phân phối có trạm điện riêng đấu nối vào cấp điện áp 110 kV có trách nhiệm:",
-  A: "Yêu cầu đơn vị phân phối đầu tư, lắp đặt rơ le tần số thấp phục vụ tự động sa thải phụ tải theo tính toán của Cấp điều độ có quyền điều khiển.",
-  B: "Giám sát đơn vị phân phối đầu tư, lắp đặt rơ le tần số thấp phục vụ tự động sa thải phụ tải theo tính toán của Cấp điều độ có quyền điều khiển.",
-  C: "Phương án (a), (b).",
-  D: "Đầu tư, lắp đặt rơ le tần số thấp phục vụ tự động sa thải phụ tải theo tính toán của Cấp điều độ có quyền điều khiển.",
+  A: "a.Yêu cầu đơn vị phân phối đầu tư, lắp đặt rơ le tần số thấp phục vụ tự động sa thải phụ tải theo tính toán của Cấp điều độ có quyền điều khiển.",
+  B: "b.Giám sát đơn vị phân phối đầu tư, lắp đặt rơ le tần số thấp phục vụ tự động sa thải phụ tải theo tính toán của Cấp điều độ có quyền điều khiển.",
+  C: "c.Phương án (a), (b).",
+  D: "d.Đầu tư, lắp đặt rơ le tần số thấp phục vụ tự động sa thải phụ tải theo tính toán của Cấp điều độ có quyền điều khiển.",
   correct: "C"
 },
 {
@@ -1193,18 +1193,18 @@ let originalQuiz = [
 },
 {
   q: "Theo Thông tư 06/2025/TT-BCT : Báo cáo sự cố và Báo cáo phân tích sự cố được gửi theo các hình thức",
-  A: "Thư điện tử (Email) theo địa chỉ do Cấp điều độ có quyền điều khiển cung cấp",
-  B: "Gửi bằng fax số do Cấp điều độ có quyền điều khiển cung cấp",
-  C: "Gửi chính thức bằng phương thức chuyển phát nhanh (văn thư)",
-  D: "Phương án (b), (c).",
+  A: "a.Thư điện tử (Email) theo địa chỉ do Cấp điều độ có quyền điều khiển cung cấp",
+  B: "b.Gửi bằng fax số do Cấp điều độ có quyền điều khiển cung cấp",
+  C: "c.Gửi chính thức bằng phương thức chuyển phát nhanh (văn thư)",
+  D: "d.Phương án (b), (c).",
   correct: "D"
 },
 {
   q: "Theo quy định tại Thông tư 06/2025/TT-BCT: Máy biến dòng điện thứ nhất trung tính MBA T1 được ký hiệu như thế nào?",
-  A: "TI0T1A.",
-  B: "Phương án (b), (c) đều đúng.",
-  C: "TI0T11.",
-  D: "TI1T1.",
+  A: "a.TI0T1A.",
+  B: "b.Phương án (b), (c) đều đúng.",
+  C: "c.TI0T11.",
+  D: "d.TI1T1.",
   correct: "B"
 },
 {
@@ -1269,7 +1269,7 @@ let originalQuiz = [
   B: "Thực hiện các thao tác trong nhà và không cần thiết phải kiểm tra ngay trạng thái tại chỗ của thiết bị đóng cắt.",
   C: "Thực hiện thao tác ngoài trời khi có mưa tạo thành dòng chảy trên thiết bị điện.",
   D: "Thực hiện các thao tác từ phòng điều khiển.",
-  correct: "D"
+  correct: "B"
 },
 {
   q: "Theo Thông tư 06/2025/TT-BCT 01/02/2025, thiết bị đầu cuối RTU/Gateway trong hệ thống SCADA được đặt ở đâu? (Chọn câu đúng nhất)",
@@ -1377,10 +1377,10 @@ let originalQuiz = [
 },
 {
   q: "Theo Thông tư 06/2025/TT-BCT : Quy định xử lý của Nhân viên vận hành tại nhà máy điện khi sự cố đường dây trên không cấp điện áp 110kV",
-  A: "Thu thập thông tin sự cố báo lên cho Cấp điều độ có quyền điều khiển",
-  B: "Lập và gửi Báo cáo nhanh sự cố cho Cấp điều độ có quyền điều khiển",
-  C: "Chủ động xử lý sự cố sau đó báo lên cho Cấp điều độ có quyền điều khiển",
-  D: "Phương án (a), (b)",
+  A: "a.Thu thập thông tin sự cố báo lên cho Cấp điều độ có quyền điều khiển",
+  B: "b.Lập và gửi Báo cáo nhanh sự cố cho Cấp điều độ có quyền điều khiển",
+  C: "c.Chủ động xử lý sự cố sau đó báo lên cho Cấp điều độ có quyền điều khiển",
+  D: "d.Phương án (a), (b)",
   correct: "D"
 },
 {
@@ -1393,10 +1393,10 @@ let originalQuiz = [
 },
 {
   q: "Theo Thông tư 06/2025/TT-BCT: Nội dung nào sau đây là đúng về trách nhiệm của đơn vị phát điện tham gia vận hành hệ thống điện quốc gia",
-  A: "Hàng năm, tổ chức diễn tập xử lý sự cố, diễn tập phòng cháy, chữa cháy cho các nhân viên vận hành ít nhất 02 lần; tổ chức diễn tập khởi động đen ít nhất 01 lần",
-  B: "Hàng năm, tổ chức diễn tập xử lý sự cố, diễn tập phòng cháy, chữa cháy cho các nhân viên vận hành ít nhất 01 lần",
-  C: "Hàng năm, tổ chức diễn tập khởi động đen và tách lưới tự dùng ít nhất 01 lần",
-  D: "Phương án (a), (b)",
+  A: "a.Hàng năm, tổ chức diễn tập xử lý sự cố, diễn tập phòng cháy, chữa cháy cho các nhân viên vận hành ít nhất 02 lần; tổ chức diễn tập khởi động đen ít nhất 01 lần",
+  B: "b.Hàng năm, tổ chức diễn tập xử lý sự cố, diễn tập phòng cháy, chữa cháy cho các nhân viên vận hành ít nhất 01 lần",
+  C: "c.Hàng năm, tổ chức diễn tập khởi động đen và tách lưới tự dùng ít nhất 01 lần",
+  D: "d.Phương án (a), (b)",
   correct: "D"
 },
 {
@@ -1617,10 +1617,10 @@ let originalQuiz = [
 },
 {
   q: "Nguyên tắc tác động của bảo vệ quá dòng sử dụng đặc tính phụ thuộc?",
-  A: "Cả (a) và (b) đều đúng",
-  B: "Dòng sự cố càng lớn thì thời gian tác động càng lớn",
-  C: "Thời gian tác động tăng lên khi khoảng cách đến điểm sự cố giảm",
-  D: "Dòng sự cố càng lớn thì thời gian tác động càng nhỏ",
+  A: "a.Cả (a) và (b) đều đúng",
+  B: "b.Dòng sự cố càng lớn thì thời gian tác động càng lớn",
+  C: "c.Thời gian tác động tăng lên khi khoảng cách đến điểm sự cố giảm",
+  D: "d.Dòng sự cố càng lớn thì thời gian tác động càng nhỏ",
   correct: "D"
 },
 {
@@ -1648,71 +1648,71 @@ let originalQuiz = [
   correct: "C"
 },
 {
-  q: "Theo Thông tư 05/2025/TT-BCT: Điện áp tại điểm đấu nối khi chưa ổn định sau sự cố cho phép dao động:",
-  A: "-05% và +10%",
-  B: "+05% và -10%",
-  C: "±10%",
-  D: "+10% và -10%",
+  q: "Theo Thông tư 05/2025/TT-BCT: Điện áp vận hành tại điểm đấu nối với Khách hàng sử dụng điện bị ảnh hưởng trực tiếp do sự cố trong điều kiện lưới điện chưa ổn định sau sự cố cho phép mức dao động",
+  A: "-05% và +10% so với điện áp danh định.",
+  B: "+05% và -10% so với điện áp danh định.",
+  C: "±10% so với điện áp danh định.",
+  D: "+10% và -10% so với điện áp danh định.",
   correct: "B"
 },
 {
-  q: "Theo Thông tư 06/2025/TT-BCT: Trường hợp nào cần xác nhận trước khi đóng lại MBA?",
+  q: "Theo Thông tư 06/2025/TT-BCT : Khi máy biến áp 110kV/6.3kV nhảy sự cố, Đơn vị quản lý vận hành phải có văn bản xác nhận máy biến áp đủ điều kiện vận hành trước khi đóng lại máy biến áp theo phương án nào?",
   A: "Tất cả các phương án trên",
-  B: "So lệch + dòng không thứ tự, lỗi nhị thứ đã khắc phục",
-  C: "Bảo vệ hơi tác động, phát hiện phóng điện thanh cái và đã khắc phục",
-  D: "So lệch tác động, phát hiện phóng điện cáp",
+  B: "Bảo vệ so lệch MBA và quá dòng thứ tự không lộ tổng phía 110kV tác động, kiểm tra phát hiện lỗi mạch nhị thứ bảo vệ so lệch và đã khắc phục",
+  C: "Bảo vệ hơi tác động, kiểm tra không phát hiện lỗi mạch nhị thứ, phát hiện phóng điện TC 6.3kV, đã khắc phục thanh cái bị hư hỏng",
+  D: "Bảo vệ hơi tác động, kiểm tra không phát hiện lỗi mạch nhị thứ, phát hiện phóng điện TC 6.3kV, đã khắc phục thanh cái bị hư hỏng",
   correct: "C"
 },
 {
-  q: "Theo Thông tư 06/2025/TT-BCT: Trách nhiệm khắc phục khiếm khuyết rơ le bảo vệ?",
+  q: "Theo Thông tư 06/2025/TT-BCT: Trách nhiệm khắc phục khiếm khuyết của trang thiết bị rơ le bảo vệ và tự động trong trường hợp tác động sai hoặc từ chối tác động?",
   A: "Đơn vị quản lý vận hành",
   B: "Nhân viên vận hành",
-  C: "Cấp điều độ",
-  D: "Đơn vị quản lý vận hành và cấp điều độ",
+  C: "Cấp điều độ có quyền điều khiển",
+  D: "Đơn vị quản lý vận hành và Cấp điều độ có quyền điều khiển",
   correct: "D"
 },
 {
-  q: "Theo quy định: Khi nào không cần kiểm tra tại chỗ trạng thái máy cắt?",
-  A: "Sau thao tác không liên quan dao cách ly",
-  B: "Phương án (a), (d)",
-  C: "Cắt máy cắt để mở vòng",
-  D: "Dao cách ly thao tác từ xa",
+  q: "Theo quy định tại Thông tư 06/2025/TT-BCT: Cho phép kiểm tra trạng thái máy cắt theo chỉ thị của tín hiệu và thông số đo lường tại phòng điều khiển mà không cần kiểm tra chỉ thị trạng thái tại chỗ trong trường hợp nào?",
+  A: "a.Sau khi thao tác máy cắt, không thao tác dao cách ly hai phía của máy cắt này.",
+  B: "b.Phương án (a), (d)",
+  C: "c.Thao tác cắt máy cắt để mở vòng trên hệ thống điện",
+  D: "d.Sau khi thao tác máy cắt, việc thao tác dao cách ly hai phía máy cắt được thực hiện bằng điều khiển từ xa.",
   correct: "B"
 },
 {
-  q: "Theo Thông tư 06/2025/TT-BCT: Điều nào không đúng khi rơ le hơi báo tín hiệu?",
-  A: "Tách MBA để sửa chữa",
-  B: "Lấy mẫu khí",
-  C: "Kiểm tra và lấy mẫu",
-  D: "Kiểm tra bên ngoài",
+  q: "Theo Thông tư 06/2025/TT-BCT: Điều nào không đúng quy định xử lý của Nhân viên vận hành tại nhà máy điện khi rơ le hơi máy biến áp tác động báo tín hiệu?",
+  A: "Tách máy biến áp, giao Đơn vị quản lý vận hành kiểm tra sửa chữa",
+  B: "Lấy mẫu khí trong rơ le",
+  C: "Kiểm tra bên ngoài máy biến áp và lấy mẫu khí trong rơ le",
+  D: "Kiểm tra bên ngoài máy biến áp",
   correct: "A"
 },
 {
-  q: "Theo Thông tư 06/2025/TT-BCT: Trường hợp không cần tách MBA?",
-  A: "Màu dầu thay đổi",
-  B: "Nhiệt độ dầu tăng cao",
-  C: "Có tiếng phóng điện",
-  D: "Dầu tràn ra ngoài",
+  q: "Theo Thông tư 06/2025/TT-BCT: Trường hợp nào không cần phải tách máy biến áp ra khỏi vận hành?",
+  A: "Màu sắc của dầu thay đổi đột ngột",
+  B: "Nhiệt độ dầu tăng cao hơn mức bình thường",
+  C: "Có tiếng kêu mạnh không đều và tiếng phóng điện trong máy biến áp",
+  D: "Dầu tràn ra ngoài máy qua bình dầu phụ, vỡ kính phòng nổ hoặc dầu phun ra qua van an toàn",
   correct: "B"
 },
 {
-  q: "Theo Thông tư 06/2025/TT-BCT: Thời gian có mặt trước ca?",
+  q: "Theo Thông tư 06/2025/TT-BCT: Nhân viên vận hành phải có mặt trước giờ giao nhận ca bao lâu để nắm rõ tình trạng vận hành?",
   A: "Ít nhất 15 phút",
   B: "Ít nhất 30 phút",
-  C: "Theo đơn vị",
+  C: "Theo quy định từng đơn vị.",
   D: "Ít nhất 20 phút",
   correct: "A"
 },
 {
-  q: "Theo Thông tư 06/2025/TT-BCT: Trình tự đầu tiên khi MBA quá tải?",
-  A: "Xử lý theo quy định",
-  B: "Báo ngay cấp điều độ",
-  C: "Báo cáo nhanh",
-  D: "Chuyển tự dùng",
+  q: "Theo Thông tư 06/2025/TT-BCT: Phương án nào quy định đúng trình tự xử lý đầu tiên của Trưởng ca khi quá tải máy biến áp?",
+  A: "Xử lý quá tải máy biến áp theo quy định",
+  B: "Báo ngay cho cấp điều độ có quyền điều khiển",
+  C: "Hoàn thành báo cáo nhanh theo quy định",
+  D: "Chuyển tự dùng xoay chiều sang nhận tự dùng dự phòng nếu mất tự dùng xoay chiều do sự cố máy biến áp",
   correct: "B"
 },
 {
-  q: "Phương tiện thông tin điều độ gồm:",
+  q: "Các phương tiện thông tin liên lạc tối thiểu phục vụ công tác điều độ được trang bị tại các nhà máy điện đấu nối vào lưới điện phân phối có công suất từ 10MW trở lên hoặc trạm biến áp cấp điện áp 110 kV và kết nối hệ thống này tương thích với hệ thống thông tin của Cấp điều độ có quyền điều khiển bao gồm:",
   A: "Tất cả các phương án trên",
   B: "Kênh trực thông",
   C: "Điện thoại",
@@ -1720,35 +1720,35 @@ let originalQuiz = [
   correct: "A"
 },
 {
-  q: "Khi nào không thực hiện lệnh điều độ?",
-  A: "Chưa nhận ca",
-  B: "Luôn phải thực hiện",
-  C: "Khi nguy hiểm đến người và thiết bị",
-  D: "Không có đáp án",
+  q: "Theo Thông tư 06/2025/TT-BCT: Nhân viên vận hành không thực hiện lệnh điều độ khi nào?",
+  A: "Khi ca trực mới chưa ký nhận ca.",
+  B: "Phải thực hiện không bàn cãi trong mọi trường hợp.",
+  C: "Khi lệnh điều độ có thể gây nguy hiểm đến tính mạng con người hoặc an toàn thiết bị.",
+  D: "Không phương án nào đúng",
   correct: "C"
 },
 {
-  q: "Khi nào phải kiểm tra tại chỗ máy cắt?",
-  A: "Trước thao tác khi thời tiết xấu",
-  B: "Trước thao tác nếu mạch tốt",
-  C: "Sau thao tác thử máy cắt",
-  D: "Sau thao tác và thao tác dao cách ly tại chỗ",
+  q: "Theo Thông tư 06/2025/TT-BCT: Nhân viên vận hành phải kiểm tra chỉ thị tại chỗ trạng thái và khoá mạch điều khiển của máy cắt trong trường hợp nào?",
+  A: "Trước khi thao tác máy cắt, nếu phải thao tác ngoài trời trong điều kiện thời tiết xấu.",
+  B: "Trước khi thao tác máy cắt, nếu mạch điều khiển ở trạng thái tốt",
+  C: "Sau khi thao tác máy cắt, nếu có thao tác đóng cắt thử máy cắt.",
+  D: "Sau khi thao tác máy cắt, nếu có thao tác tại chỗ dao cách ly hai phía của máy cắt.",
   correct: "D"
 },
 {
-  q: "Với rơle 87T có hãm, khi sự cố ngoài vùng?",
+  q: "Đối với rơle 87T có hãm, khi sự cố nằm ngoài phạm vi bảo vệ thì?",
   A: "Dòng so lệch nhỏ hơn dòng hãm",
-  B: "Bằng",
-  C: "Lớn hơn",
-  D: "Không xác định",
+  B: "Dòng so lệch bằng dòng hãm",
+  C: "Dòng so lệch lớn hơn dòng hãm",
+  D: "Không xác định được",
   correct: "A"
 },
 {
-  q: "Các yếu tố ảnh hưởng đến 87L?",
+  q: "Các yếu tố nào sau đây ảnh hưởng đến chức năng 87L?",
   A: "Cả 3 đều đúng",
-  B: "Sai số TI",
-  C: "Độ trễ truyền tin",
-  D: "Dòng không tải",
+  B: "Sai số TI hai đầu đường dây",
+  C: "Độ trễ kênh truyền tin giữa các thiết bị rơle",
+  D: "Dòng điện không tải đường dây",
   correct: "A"
 },
 {
@@ -1865,10 +1865,10 @@ let originalQuiz = [
 },
 {
   q: "Theo Thông tư 05/2025/TT-BCT: Điện áp vận hành cho phép tại điểm đấu nối trong chế độ bình thường:",
-  A: "(a) và (b)",
-  B: "(a) Tại điểm đấu nối với Khách hàng là ± 05 %.",
-  C: "(b) Tại điểm đấu nối với nhà máy điện là + 10% và - 05%.",
-  D: "(c) Tại điểm đấu nối với nhà máy điện là ± 10 %.",
+  A: "a.(a) và (b)",
+  B: "b.(a) Tại điểm đấu nối với Khách hàng là ± 05 %.",
+  C: "c.(b) Tại điểm đấu nối với nhà máy điện là + 10% và - 05%.",
+  D: "c.(c) Tại điểm đấu nối với nhà máy điện là ± 10 %.",
   correct: "A"
 },
 {
@@ -1913,10 +1913,10 @@ let originalQuiz = [
 },
 {
   q: "Theo Thông tư 05/2025/TT-BCT: Đơn vị phát điện có quyền yêu cầu thí nghiệm khi nào?",
-  A: "(c) Khi Đơn vị phân phối điện và Đơn vị phát điện không thống nhất ý kiến về các thông số và đặc tính vận hành của tổ máy phát điện trong kết quả thí nghiệm",
-  B: "(d) Phương án (a), (b)",
-  C: "(b) Kiểm tra tổ máy phát điện sau khi lắp đặt, sửa chữa lớn, thay thế, cải tiến hoặc lắp ráp lại.",
-  D: "(a) Kiểm tra lại các đặc tính vận hành của tổ máy phát điện đã được hiệu chỉnh sau mỗi lần xảy ra sự cố hư hỏng liên quan đến tổ máy phát điện",
+  A: "a.(c) Khi Đơn vị phân phối điện và Đơn vị phát điện không thống nhất ý kiến về các thông số và đặc tính vận hành của tổ máy phát điện trong kết quả thí nghiệm",
+  B: "b.(d) Phương án (a), (b)",
+  C: "c.(b) Kiểm tra tổ máy phát điện sau khi lắp đặt, sửa chữa lớn, thay thế, cải tiến hoặc lắp ráp lại.",
+  D: "d.(a) Kiểm tra lại các đặc tính vận hành của tổ máy phát điện đã được hiệu chỉnh sau mỗi lần xảy ra sự cố hư hỏng liên quan đến tổ máy phát điện",
   correct: "B"
 },
 {
@@ -1937,10 +1937,10 @@ let originalQuiz = [
 },
 {
   q: "Việc viết phiếu, duyệt phiếu thao tác trong nội bộ 01 trạm điện/NMĐ thuộc trách nhiệm của:",
-  A: "(c) Lãnh đạo đơn vị quản lý vận hành.",
-  B: "(b) Cấp Điều độ có quyền kiểm tra.",
-  C: "Cả (a) và (b) đều đúng.",
-  D: "(a) Đơn vị quản lý vận hành.",
+  A: "a.(c) Lãnh đạo đơn vị quản lý vận hành.",
+  B: "b.(b) Cấp Điều độ có quyền kiểm tra.",
+  C: "c.Cả (a) và (b) đều đúng.",
+  D: "d.(a) Đơn vị quản lý vận hành.",
   correct: "D"
 },
 {
@@ -1973,7 +1973,7 @@ let originalQuiz = [
   B: "Tại các cấp độ điều độ quốc gia và miền.",
   C: "Tại các trung tâm điều khiển.",
   D: "Tại các cấp độ điều độ.",
-  correct: "D"
+  correct: "A"
 },
 {
   q: "Theo Thông tư 05/2025/TT-BCT: Đường dây dẫn điện sau khi đã cắt điện từ cả hai phía phải được kiểm tra không còn điện bằng phương án nào?",
@@ -2000,7 +2000,7 @@ let originalQuiz = [
   correct: "D"
 },
 {
-  q: "Theo Thông tư 05/2025/TT-BCT: Tổ máy phát điện ≤30MW phải có hệ số công suất:",
+  q: "Theo Thông tư 05/2025/TT-BCT: Yêu cầu đối với tổ máy phát điện của nhà máy thủy điện và nhà máy nhiệt điện có công suất đến 30 MW đấu nối vào lưới điện phân phối phải có khả năng nhận liên tục công suất phản kháng với hệ số công suất là:",
   A: "0.98",
   B: "0.95",
   C: "0.9",
@@ -2008,39 +2008,39 @@ let originalQuiz = [
   correct: "B"
 },
 {
-  q: "Theo Thông tư 06/2025/TT-BCT: Những chức danh nào được nhận lệnh thao tác?",
-  A: "Trưởng ca NMĐ; Trực chính TBA; NVVH cấp dưới trực tiếp",
-  B: "NVVH cấp dưới trực tiếp của người ra lệnh.",
+  q: "Theo quy định tại Thông tư 06/2025/TT-BCT: Những chức danh nào dưới đây được nhận lệnh thao tác trên thiết bị điện?",
+  A: "Trưởng ca các nhà máy điện; Trực chính trạm 110kV; Nhân viên vận hành cấp dưới trực tiếp của người ra lệnh.",
+  B: "Nhân viên vận hành cấp dưới trực tiếp của người ra lệnh.",
   C: "Trực chính trạm 110kV.",
   D: "Trưởng ca các nhà máy điện.",
   correct: "B"
 },
 {
-  q: "Ai phải khóa tự động đóng lại khi sự cố thoáng qua 3 lần/8h?",
+  q: "Đối tượng nào phải khóa mạch tự động đóng lại của đường dây trong trường hợp sự cố thoáng qua 03 lần trong vòng 08 giờ của đường dây trên không cấp điện áp 110kV",
   A: "Nhân viên vận hành",
   B: "Các đáp án trên đều sai",
   C: "Đơn vị quản lý vận hành",
-  D: "Cấp điều độ",
+  D: "Cấp điều độ có quyền điều khiển",
   correct: "A"
 },
 {
-  q: "Đơn vị nào ban hành quy trình thao tác thiết bị điện?",
+  q: "Theo quy định tại Thông tư 06/2025/TT-BCT: Việc ban hành quy trình thao tác thiết bị điện thuộc phạm vi quản lý phù hợp với yêu cầu của nhà chế tạo, sơ đồ kết dây và quy định tại Thông tư này thuộc trách nhiệm của Đơn vị nào?",
   A: "Đơn vị quản lý vận hành.",
   B: "Các cấp điều độ liên quan.",
-  C: "Nhà sản xuất và đơn vị vận hành.",
+  C: "Nhà sản chế tạo thiết bị và đơn vị quản lý vận hành",
   D: "Đơn vị tư vấn",
   correct: "A"
 },
 {
-  q: "Đóng cắt thử máy cắt được thực hiện khi nào?",
-  A: "Đóng 1 phía + tiếp địa 1 phía",
-  B: "Hai phía cách ly hoàn toàn, tiếp địa 1 phía",
-  C: "Đóng cả 2 phía",
-  D: "Tiếp địa cả 2 phía",
+  q: "Theo quy định tại Thông tư 06/2025/TT-BCT: Đóng cắt thử máy cắt được thực hiện trong trường hợp nào dưới đây?",
+  A: "Đóng dao cách ly một phía của máy cắt và đóng dao tiếp địa cố định hoặc tiếp địa di động ở một phía của máy cắt.",
+  B: "Các dao cách ly hai phía của máy cắt được cắt hoàn toàn và chỉ đóng dao tiếp địa cố định hoặc tiếp địa di động ở một phía của máy cắt.",
+  C: "Đóng dao cách ly cả hai phía của máy cắt, dao tiếp địa cố định hoặc tiếp địa di động ở cả hai phía của máy cắt được cắt hoàn toàn.",
+  D: "Các dao cách ly hai phía của máy cắt được cắt hoàn toàn và đóng dao tiếp địa cố định hoặc tiếp địa di động ở cả hai phía của máy cắt.",
   correct: "B"
 },
 {
-  q: "Thiết bị dự phòng bao lâu phải thí nghiệm lại trước khi đóng điện?",
+  q: "Theo Thông tư 06/2025/TT-BCT: Trường hợp thiết bị điện được tách dự phòng (không mang điện) trong thời gian bao nhiêu lâu, trước khi đưa vào vận hành, Đơn vị quản lý vận hành thiết bị phải thực hiện thí nghiệm, kiểm tra và xác nhận thiết bị điện đủ tiêu chuẩn vận hành:",
   A: "Quá 45 ngày",
   B: "Quá 120 ngày",
   C: "Quá 90 ngày",
@@ -2048,27 +2048,27 @@ let originalQuiz = [
   correct: "C"
 },
 {
-  q: "Chức năng 50BF được khởi tạo từ?",
-  A: "Tín hiệu pickup",
-  B: "Lệnh trip từ bảo vệ",
-  C: "Tín hiệu dropout",
-  D: "Tất cả sai",
+  q: "Chức năng 50BF (Bảo vệ chống máy cắt hư hỏng) được khởi tạo từ:",
+  A: "Tín hiệu pickup của các bảo vệ",
+  B: "Lệnh trip từ các bảo vệ",
+  C: "Tín hiệu dropout của các bảo vệ",
+  D: "Các ý trên đều sai",
   correct: "B"
 },
 {
-  q: "Báo cáo phân tích sự cố phải gửi trong bao lâu?",
-  A: "48h",
-  B: "24h",
+  q: "Theo Thông tư 06/2025/TT-BCT: Đơn vị quản lý vận hành có trách nhiệm gửi Báo cáo phân tích sự cố hệ thống điện thuộc quyền quản lý vận hành cho đơn vị quản lý cấp trên:",
+  A: "Trong vòng 48h kể từ khi sự cố xảy ra",
+  B: "Trong vòng 24h kể từ khi sự cố xảy ra",
   C: "Sau khi khắc phục",
-  D: "Khi yêu cầu",
+  D: "Khi được yêu cầu",
   correct: "B"
 },
 {
-  q: "Nhà máy nào được tự điều khiển công suất?",
-  A: "(c) >30MW",
-  B: "(b) NLTT >30MW",
-  C: "(d) Cả (a), (b)",
-  D: "(a) Chi phí tránh được",
+  q: "Theo Thông tư 06/2025/TT-BCT: Trừ trường hợp xảy ra quá tải hoặc ảnh hưởng đến an ninh hệ thống điện, cho phép các nhà máy điện sau đây tự điều khiển phát công suất tác dụng:",
+  A: "a.(c) Nhà máy điện có công suất lớn hơn 30MW",
+  B: "b.(b) Nhà máy điện gió, mặt trời có công suất lớn hơn 30MW",
+  C: "c.(d) Phương án (a), (b)",
+  D: "d.(a) Nhà máy điện được huy động theo cơ chế chi phí tránh được.",
   correct: "C"
 },
 {
@@ -2089,10 +2089,10 @@ let originalQuiz = [
 },
 {
   q: "Các phương pháp được sử dụng trong chức năng bảo vệ chạm đất 100% Stator?",
-  A: "(b) Bơm điện áp tần số thấp",
-  B: "Cả (a) và (b) đều đúng",
-  C: "(a) Sử dụng điện áp sóng hài bậc 3",
-  D: "(c) Sử dụng điện áp thứ tự không",
+  A: "a.(b) Bơm điện áp tần số thấp",
+  B: "b.Cả (a) và (b) đều đúng",
+  C: "c.(a) Sử dụng điện áp sóng hài bậc 3",
+  D: "d.(c) Sử dụng điện áp thứ tự không",
   correct: "B"
 },
 {
@@ -2129,18 +2129,18 @@ let originalQuiz = [
 },
 {
   q: "Theo Thông tư 06/2025/TT-BCT: Quy định xử lý của Nhân viên vận hành tại nhà máy điện khi sự cố đường dây trên không cấp điện áp 110kV:",
-  A: "(a) Thu thập thông tin sự cố báo lên cho Cấp điều độ có quyền điều khiển",
-  B: "(b) Lập và gửi Báo cáo nhanh sự cố cho Cấp điều độ có quyền điều khiển",
-  C: "(d) Phương án (a), (b)",
-  D: "(c) Chủ động xử lý sự cố sau đó báo lên cho Cấp điều độ có quyền điều khiển",
+  A: "a.(a) Thu thập thông tin sự cố báo lên cho Cấp điều độ có quyền điều khiển",
+  B: "b.(b) Lập và gửi Báo cáo nhanh sự cố cho Cấp điều độ có quyền điều khiển",
+  C: "c.(d) Phương án (a), (b)",
+  D: "d.(c) Chủ động xử lý sự cố sau đó báo lên cho Cấp điều độ có quyền điều khiển",
   correct: "C"
 },
 {
   q: "Theo Thông tư 06/2025/TT-BCT: Thực hiện biểu đồ điện áp theo phương án nào?",
-  A: "(d) Phương án (a) và (b)",
-  B: "(b) Nhân viên vận hành tại trạm điện tự điều chỉnh điện áp theo biểu đồ do cấp điều độ có quyền điều khiển giao",
-  C: "(c) Cấp điều độ có quyền điều khiển lệnh cho nhân viên vận hành cấp dưới điều chỉnh điện áp theo biểu đồ",
-  D: "(a) Nhân viên vận hành tại nhà máy điện tự điều chỉnh điện áp theo biểu đồ do cấp điều độ có quyền điều khiển giao",
+  A: "a.(d) Phương án (a) và (b)",
+  B: "b.(b) Nhân viên vận hành tại trạm điện tự điều chỉnh điện áp theo biểu đồ do cấp điều độ có quyền điều khiển giao",
+  C: "c.(c) Cấp điều độ có quyền điều khiển lệnh cho nhân viên vận hành cấp dưới điều chỉnh điện áp theo biểu đồ",
+  D: "d.(a) Nhân viên vận hành tại nhà máy điện tự điều chỉnh điện áp theo biểu đồ do cấp điều độ có quyền điều khiển giao",
   correct: "A"
 },
 {
@@ -2153,10 +2153,10 @@ let originalQuiz = [
 },
 {
   q: "Theo Thông tư 05/2025/TT-BCT: Công suất khả dụng của tổ máy phát điện được hiểu:",
-  A: "(d) Phương án (a) và (c).",
-  B: "(b) Là công suất phát thực tế của tổ máy phát điện có thể phát ổn định, liên tục trong một khoảng thời gian xác định.",
-  C: "(c) Là công suất phát thực tế cực đại của tổ máy phát điện có thể phát ổn định trong một khoảng thời gian quy định cụ thể.",
-  D: "(a) Là công suất phát thực tế cực đại của tổ máy phát điện có thể phát ổn định, liên tục trong một khoảng thời gian xác định.",
+  A: "a.(d) Phương án (a) và (c).",
+  B: "b.(b) Là công suất phát thực tế của tổ máy phát điện có thể phát ổn định, liên tục trong một khoảng thời gian xác định.",
+  C: "c.(c) Là công suất phát thực tế cực đại của tổ máy phát điện có thể phát ổn định trong một khoảng thời gian quy định cụ thể.",
+  D: "d.(a) Là công suất phát thực tế cực đại của tổ máy phát điện có thể phát ổn định, liên tục trong một khoảng thời gian xác định.",
   correct: "D"
 },
 {
@@ -2177,10 +2177,10 @@ let originalQuiz = [
 },
 {
   q: "Theo Thông tư 06/2025/TT-BCT: Khi máy phát điện xuất hiện cảnh báo (quá tải stator, quá tải rotor, kích thích tối thiểu hoặc cảnh báo khác) nhân viên vận hành có thể xử lý các phương án như sau:",
-  A: "(a) Xử lý tín hiệu cảnh báo MFĐ theo Quy trình vận hành và xử lý sự cố nhà máy điện do Đơn vị quản lý vận hành ban hành.",
-  B: "(b) Giải trừ tín hiệu cảnh báo và báo cáo cho điều độ viên có quyền điều khiển biết.",
-  C: "(d) Phương án (a), (c).",
-  D: "(c) Báo cáo ngay cho Cấp điều độ có quyền điều khiển thời gian để xử lý và kiến nghị các yêu cầu xử lý cảnh báo.",
+  A: "a.(a) Xử lý tín hiệu cảnh báo MFĐ theo Quy trình vận hành và xử lý sự cố nhà máy điện do Đơn vị quản lý vận hành ban hành.",
+  B: "b.(b) Giải trừ tín hiệu cảnh báo và báo cáo cho điều độ viên có quyền điều khiển biết.",
+  C: "c.(d) Phương án (a), (c).",
+  D: "d.(c) Báo cáo ngay cho Cấp điều độ có quyền điều khiển thời gian để xử lý và kiến nghị các yêu cầu xử lý cảnh báo.",
   correct: "C"
 },
 {
@@ -2225,10 +2225,10 @@ let originalQuiz = [
 },
 {
   q: "Theo Thông tư 05/2025/TT-BCT: Hệ thống bảo vệ của nhà máy điện có các đường dây điện cấp điện áp 110 kV đấu nối nhà máy điện vào hệ thống điện quốc gia phải có:",
-  A: "Ít nhất 01 kênh thông tin liên lạc phục vụ truyền tín hiệu rơ le bảo vệ, thời gian ≤ 30 ms.",
-  B: "Ít nhất 01 kênh thông tin liên lạc, thời gian ≤ 20 ms.",
-  C: "02 kênh thông tin liên lạc, thời gian ≤ 30 ms.",
-  D: "02 kênh thông tin liên lạc, thời gian ≤ 20 ms.",
+  A: "Ít nhất 01 (một) kênh thông tin liên lạc phục vụ cho việc truyền tín hiệu rơ le bảo vệ giữa hai đầu đường dây với thời gian truyền không lớn hơn 30 ms.",
+  B: "Ít nhất 01 (một) kênh thông tin liên lạc phục vụ cho việc truyền tín hiệu rơ le bảo vệ giữa hai đầu đường dây với thời gian truyền không lớn hơn 20 ms",
+  C: "02 (hai) kênh thông tin liên lạc phục vụ cho việc truyền tín hiệu rơ le bảo vệ giữa hai đầu đường dây với thời gian truyền không lớn hơn 30 ms.",
+  D: "02 (hai) kênh thông tin liên lạc phục vụ cho việc truyền tín hiệu rơ le bảo vệ giữa hai đầu đường dây với thời gian truyền không lớn hơn 20 ms.",
   correct: "D"
 },
 {
@@ -2297,10 +2297,10 @@ let originalQuiz = [
 },
 {
   q: "Theo Thông tư 06/2025/TT-BCT: Thay đổi, điều chỉnh kế hoạch bảo dưỡng, sửa chữa theo đề nghị của Cấp điều độ có quyền điều khiển để đảm bảo an ninh hệ thống điện trong các trường hợp:",
-  A: "(d) Phương án (b) và (c)",
-  B: "(c) Trên cơ sở đánh giá khả năng bảo đảm cung cấp điện ngắn hạn, việc tách thiết bị để bảo dưỡng, sửa chữa hoặc tiếp tục cô lập thiết bị đang trong quá trình bảo dưỡng, sửa chữa có thể làm suy giảm bảo đảm cung cấp điện.",
-  C: "(a) Không thể thực hiện được kế hoạch bảo dưỡng, sửa chữa thiết bị lưới điện và nhà máy điện do xảy ra các trường hợp bất khả kháng hoặc theo yêu cầu phát sinh của cơ quan có thẩm quyền.",
-  D: "(b) Tại bất kỳ thời điểm nào, khi nhận thấy việc tách thiết bị để bảo dưỡng sửa chữa hoặc tiếp tục cô lập thiết bị đang trong quá trình bảo dưỡng, sửa chữa dẫn đến vi phạm bảo đảm cung cấp điện.",
+  A: "a.(d) Phương án (b) và (c)",
+  B: "b.(c) Trên cơ sở đánh giá khả năng bảo đảm cung cấp điện ngắn hạn, việc tách thiết bị để bảo dưỡng, sửa chữa hoặc tiếp tục cô lập thiết bị đang trong quá trình bảo dưỡng, sửa chữa có thể làm suy giảm bảo đảm cung cấp điện.",
+  C: "c.(a) Không thể thực hiện được kế hoạch bảo dưỡng, sửa chữa thiết bị lưới điện và nhà máy điện do xảy ra các trường hợp bất khả kháng hoặc theo yêu cầu phát sinh của cơ quan có thẩm quyền.",
+  D: "d.(b) Tại bất kỳ thời điểm nào, khi nhận thấy việc tách thiết bị để bảo dưỡng sửa chữa hoặc tiếp tục cô lập thiết bị đang trong quá trình bảo dưỡng, sửa chữa dẫn đến vi phạm bảo đảm cung cấp điện.",
   correct: "A"
 },
 {
@@ -2344,7 +2344,7 @@ let originalQuiz = [
   correct: "C"
 },
 {
-  q: "CTheo Thông tư 06/2025/TT-BCT: Khi máy biến áp 110kV/6.3kV nhảy sự cố, Đơn vị quản lý vận hành phải có văn bản xác nhận máy biến áp đủ điều kiện vận hành trước khi đóng lại máy biến áp theo phương án nào:",
+  q: "Theo Thông tư 06/2025/TT-BCT: Khi máy biến áp 110kV/6.3kV nhảy sự cố, Đơn vị quản lý vận hành phải có văn bản xác nhận máy biến áp đủ điều kiện vận hành trước khi đóng lại máy biến áp theo phương án nào:",
   A: "Bảo vệ so lệch tác động, kiểm tra không phát hiện lỗi mạch nhị thứ, phát hiện phóng điện cáp pha A từ MBA đến MC lộ tổng phía 6.3kV, đã khắc phục sợi cáp bị hư hỏng",
   B: "Bảo vệ so lệch MBA và quá dòng thứ tự không lộ tổng phía 110kV tác động, kiểm tra phát hiện lỗi mạch nhị thứ bảo vệ so lệch và đã khắc phục",
   C: "Bảo vệ hơi tác động, kiểm tra không phát hiện lỗi mạch nhị thứ, phát hiện phóng điện TC 6.3kV, đã khắc phục thanh cái bị hư hỏng",
@@ -2369,10 +2369,10 @@ let originalQuiz = [
 },
 {
   q: "Phân biệt chế độ sự cố và chế độ làm việc không bình thường: Trong các chế độ làm việc sau đây của máy phát, chế độ nào là sự cố?",
-  A: "(a) Chạm chập giữa các vòng dây trong cùng 1 pha.",
-  B: "(b) Dòng điện tăng cao do ngắn mạch ngoài hoặc do quá tải.",
-  C: "Cả phương án (b) và (c) đều đúng.",
-  D: "(c) Điện áp đầu cực tăng cao do mất tải đột ngột hoặc do cắt ngắn mạch ngoài",
+  A: "a.(a) Chạm chập giữa các vòng dây trong cùng 1 pha.",
+  B: "b.(b) Dòng điện tăng cao do ngắn mạch ngoài hoặc do quá tải.",
+  C: "c.Cả phương án (b) và (c) đều đúng.",
+  D: "d.(c) Điện áp đầu cực tăng cao do mất tải đột ngột hoặc do cắt ngắn mạch ngoài",
   correct: "A"
 },
 {
@@ -2462,7 +2462,360 @@ let originalQuiz = [
   C: "Tách hoặc đưa vào vận hành máy cắt, thanh cái, đường dây; Dùng máy cắt vòng thay cho máy cắt đang vận hành và ngược lại; Tách hoặc đưa vào vận hành dao cách ly.",
   D: "Tách hoặc đưa vào vận hành máy cắt, dao cách ly, đường dây; Dùng máy cắt vòng thay cho máy cắt đang vận hành và ngược lại; Tách hoặc đưa vào vận hành thiết bị bù.",
   correct: "B"
-}
+},
+{
+  q: "Theo quy định tại Thông tư 06/2025/TT-BCT: Phương án nào sau đây đúng trình tự tiến hành thao tác tại vị trí đặt thiết bị điện nhất thứ?",
+  A: "Người giám sát đọc lệnh; Người thao tác nhắc lại lệnh; Người thao tác thực hiện thao tác; Người giám sát và người thao tác kiểm tra thao tác tốt.",
+  B: "Người giám sát và người thao tác kiểm tra đúng thiết bị cần thao tác; Người giám sát đọc lệnh; Người thao tác nhắc lại lệnh; Người thao tác thực hiện thao tác.",
+  C: "Người thao tác kiểm tra đúng thiết bị cần thao tác; Người giám sát đọc lệnh; Người thao tác nhắc lại lệnh; Người thao tác thực hiện thao tác.",
+  D: "Người giám sát kiểm tra đúng thiết bị cần thao tác; Người giám sát đọc lệnh; Người thao tác nhắc lại lệnh; Người thao tác thực hiện thao tác.",
+  correct: "B"
+},
+{
+  q: "Theo Thông tư 05/2025/TT-BCT: Trong chế độ sự cố hệ thống điện hoặc khôi phục sự cố, cho phép mức dao động điện áp:",
+  A: "± 10% so với điện áp danh định.",
+  B: "- 5% so với điện áp danh định.",
+  C: "± 5% so với điện áp danh định.",
+  D: "± 15% so với điện áp danh định.",
+  correct: "A"
+},
+{
+  q: "Theo Thông tư 06/2025/TT-BCT: Khi sự cố xảy ra, nhân viên vận hành phải tiến hành công việc nào đầu tiên?",
+  A: "Reset các tín hiệu, chuông còi.",
+  B: "Áp dụng các biện pháp xử lý sự cố theo quy định để nhanh chóng loại trừ sự cố và ngăn ngừa sự cố lan rộng.",
+  C: "Cô lập phần tử bị sự cố.",
+  D: "Báo cáo thông tin sự cố cho Cấp điều độ có quyền điều khiển.",
+  correct: "B"
+},
+{
+  q: "Theo Thông tư 06/2025/TT-BCT: Phương án nào quy định đúng khi lệnh của lãnh đạo trực tiếp trái với lệnh điều độ của nhân viên vận hành cấp trên thì:",
+  A: "Nhân viên vận hành cấp dưới thi hành không bàn cãi, không chậm trễ lệnh của nhân viên vận hành cấp trên.",
+  B: "Nhân viên vận hành cấp dưới phải thi hành nếu mệnh lệnh đó là hợp lý.",
+  C: "Nhân viên vận hành cấp dưới không thi hành.",
+  D: "Nhân viên vận hành cấp dưới có quyền không thi hành và thông báo lại với nhân viên vận hành cấp trên trừ trường hợp nguy hiểm đến tính mạng con người hoặc an toàn thiết bị.",
+  correct: "D"
+},
+{
+  q: "Theo quy định tại Thông tư 06/2025/TT-BCT: Cho phép nhân viên vận hành không cần lập phiếu thao tác nhưng phải ghi chép đầy đủ các bước thao tác vào sổ nhật ký vận hành trong các trường hợp nào sau đây? (Chọn các đáp án đúng)",
+  A: "Xử lý sự cố, thao tác có số bước thao tác bằng 4 (bốn) bước và được thực hiện tại các cấp điều độ có quyền điều khiển.",
+  B: "Xử lý sự cố, thao tác có số bước thao tác không quá 03 (ba) bước.",
+  C: "Thao tác có số bước thao tác không quá 05 (năm) bước hoặc thực hiện tại các cấp điều độ có quyền điều khiển.",
+  D: "Thao tác được thực hiện tại trung tâm điều khiển hoặc thao tác bằng điều khiển từ xa.",
+  correct: "A"
+},
+{
+  q: "Theo quy định tại Thông tư 06/2025/TT-BCT: Khi truyền đạt lệnh thao tác bằng lời nói, người ra lệnh phải thực hiện như thế nào là đúng?",
+  A: "Thông báo rõ họ tên và phải xác định rõ họ tên, chức danh người nhận lệnh.",
+  B: "Chỉ cần xác định rõ họ tên người nhận lệnh và số phiếu thao tác.",
+  C: "Thông báo rõ số phiếu thao tác và phải xác định rõ họ tên, chức danh người nhận lệnh.",
+  D: "Thông báo rõ họ tên người ra lệnh, số phiếu thao tác và phải xác định rõ họ tên, chức danh người nhận lệnh.",
+  correct: "A"
+},
+{
+  q: "Theo Thông tư 06/2025/TT-BCT: Nếu không có quy định riêng, máy biến áp dầu được phép quá tải ngắn hạn 30% trong bao lâu?",
+  A: "60 phút",
+  B: "100 phút",
+  C: "80 phút",
+  D: "120 phút",
+  correct: "D"
+},
+{
+  q: "Theo quy định tại Thông tư 06/2025/TT-BCT: Hình thức nào dưới đây quy định thực hiện chuyển phiếu thao tác giữa các đơn vị tham gia thao tác?",
+  A: "Thư điện tử, chuyển trực tiếp hoặc qua web.",
+  B: "Điện thoại, thư điện tử hoặc các hình thức qua mạng khác, chuyển trực tiếp.",
+  C: "Điện thoại, fax, tin nhắn, thư điện tử hoặc các hình thức qua mạng khác, chuyển trực tiếp.",
+  D: "Điện thoại, fax, thư điện tử hoặc các hình thức qua mạng khác.",
+  correct: "C"
+},
+{
+  q: "Theo Thông tư 06/2025/TT-BCT: Phương án nào quy định không đúng nhiệm vụ của Trưởng ca nhà máy điện trong xử lý sự cố?",
+  A: "Xử lý sự cố phần lưới điện tự dùng và báo cáo cho nhân viên vận hành cấp trên để phối hợp ngăn ngừa sự cố mở rộng.",
+  B: "Xử lý sự cố theo đúng quy trình.",
+  C: "Áp dụng mọi biện pháp nhanh nhất cấp điện lại cho khách hàng và đảm bảo chất lượng điện năng",
+  D: "Áp dụng mọi biện pháp cần thiết theo quy định để ngăn ngừa sự cố mở rộng",
+  correct: "C"
+},
+{
+  q: "Điều kiện tự đóng lại đường dây 110kV là?",
+  A: "Thanh cái có điện/đường dây không điện hoặc thanh cái không điện/đường dây có điện.",
+  B: "Cả 2 đều đúng.",
+  C: "Thanh cái có điện/đường dây có điện và thoả mãn điều kiện hoà.",
+  D: "Cả 2 đều sai.",
+  correct: "B"
+},
+{
+  q: "Theo Thông tư 06/2025/TT-BCT: Quy định quan hệ công tác trong xử lý sự cố:",
+  A: "Nhân viên vận hành cấp dưới phải chấp hành các mệnh lệnh của Nhân viên vận hành cấp trên. Đối với những lệnh có nguy cơ đe dọa đến tính mạng con người và an toàn thiết bị thì được phép chưa thực hiện nhưng phải báo cáo Nhân viên vận hành cấp trên.",
+  B: "Nhân viên vận hành cấp dưới được phép không thực hiện đối với những lệnh có nguy cơ đe dọa đến tính mạng con người và an toàn thiết bị và không phải chịu trách nhiệm.",
+  C: "Lãnh đạo nhân viên vận hành cấp dưới có quyền đề nghị Lãnh đạo trực tiếp của Nhân viên vận hành cấp trên thay thế Nhân viên vận hành này trong trường hợp có đầy đủ lý do cho thấy Nhân viên vận hành cấp trên ra lệnh điều độ gây nguy hiểm cho con người và thiết bị.",
+  D: "Nhân viên vận hành cấp trên có quyền thay thế Nhân viên vận hành này trong trường hợp có đầy đủ lý do cho thấy Nhân viên vận hành cấp dưới không đủ năng lực xử lý sự cố hoặc vi phạm nghiêm trọng quy chuẩn kỹ thuật, quy trình liên quan.",
+  correct: "A"
+},
+{
+  q: "Theo Thông tư 05/2025/TT-BCT 01/02/2025, thiết bị đầu cuối RTU/Gateway phải có đặc tính kỹ thuật như thế nào để đảm bảo kết nối được với hệ thống SCADA của Cấp điều độ có quyền điều khiển và hệ thống điều khiển của Trung tâm điều khiển (nếu có)? (Chọn câu đúng nhất)",
+  A: "Phải là thiết bị mới 100%.",
+  B: "Chỉ cần truyền được một số loại tín hiệu cơ bản.",
+  C: "Phải có đặc tính kỹ thuật tương thích và đảm bảo kết nối được.",
+  D: "Phải do cùng một nhà sản xuất cung cấp.",
+  correct: "C"
+},
+{
+  q: "Theo quy định tại Thông tư 06/2025/TT-BCT: Không được hủy phiếu thao tác trong các trường hợp nào?",
+  A: "Thao tác xử lý sự cố.",
+  B: "Thao tác đóng điện công trình mới.",
+  C: "Thao tác có xảy ra sự cố hoặc tai nạn.",
+  D: "Thao tác có xảy ra sự cố hoặc tai nạn và thao tác xử lý sự cố.",
+  correct: "C"
+},
+{
+  q: "Theo Thông tư 06/2025/TT-BCT: Điều chỉnh tần số thứ cấp được hiểu theo như thế nào:",
+  A: "Là quá trình điều chỉnh tức thời tần số hệ thống điện được thực hiện bởi các tổ máy phát điện có trang bị hệ thống điều tốc.",
+  B: "Các phương án trên đều sai.",
+  C: "Là quá trình điều chỉnh được thực hiện thông qua tác động của hệ thống AGC nhằm đưa tần số về dải tần số 50 ± 0,5 Hz.",
+  D: "Là quá trình điều chỉnh được thực hiện thông qua tác động của hệ thống AGC nhằm đưa tần số về dải tần số 50 ± 0,2 Hz.",
+  correct: "D"
+},
+{
+  q: "Theo quy định tại Thông tư 06/2025/TT-BCT: Trường hợp nào tạm ngừng thao tác là không đúng?",
+  A: "Khi thời gian thao tác kéo dài liên tục quá 04 giờ đối với người thao tác trực tiếp tại trạm điện hoặc nhà máy điện.",
+  B: "Khi thao tác phải thực hiện ngoài trời trong điều kiện thời tiết xấu.",
+  C: "Tạm ngừng thao tác cho tới khi xử lý xong sự cố, hiện tượng bất thường trong trường hợp đang thao tác thì xảy ra sự cố hoặc có cảnh báo hiện tượng bất thường tại trạm điện, nhà máy điện hoặc trên hệ thống điện.",
+  D: "Khi thao tác vào giờ cao điểm của hệ thống.",
+  correct: "D"
+},
+{
+  q: "Theo quy định tại Thông tư 06/2025/TT-BCT: Sau khi thao tác máy cắt yêu cầu cần phải kiểm tra chỉ thị trạng thái tại chỗ của máy cắt trong trường hợp nào dưới đây?",
+  A: "Không có thao tác DCL hai phía máy cắt.",
+  B: "Có thao tác tại chỗ DCL hai phía máy cắt.",
+  C: "Có thao tác DCL hai phía máy cắt bằng điều khiển từ xa.",
+  D: "Không có thao tác DCL hai phía máy cắt hoặc khi có thao tác DCL hai phía máy cắt bằng điều khiển từ xa.",
+  correct: "B"
+},
+{
+  q: "Độ lệch điện áp lớn nhất cho phép khi hoà đồng bộ ở cấp điện áp 110kV theo Thông tư Quy định điều độ, vận hành, thao tác, xử lý sự cố, khởi động đen và khôi phục hệ thống điện quốc gia là bao nhiêu?",
+  A: "± 10%",
+  B: "± 12%",
+  C: "± 15%",
+  D: "± 20%",
+  correct: "A"
+},
+{
+  q: "Theo quy định tại Thông tư 06/2025/TT-BCT: Yêu cầu đối với người giám sát, người thao tác khi thực hiện thao tác tại vị trí đặt thiết bị nhất thứ là gì?",
+  A: "Mọi thao tác tại vị trí đặt thiết bị điện nhất thứ đều phải có ba người phối hợp thực hiện: Một người giám sát, một người ra lệnh và một người thao tác trực tiếp. Trong mọi trường hợp, ba người đều chịu trách nhiệm như nhau về thao tác.",
+  B: "Mọi thao tác tại vị trí đặt thiết bị điện nhất thứ đều phải có hai người phối hợp thực hiện: Một người ra lệnh và một người nhận lệnh. Trong mọi trường hợp, hai người đều chịu trách nhiệm như nhau về thao tác.",
+  C: "Mọi thao tác tại vị trí đặt thiết bị điện nhị thứ đều phải có hai người phối hợp thực hiện: Một người ra lệnh và một người nhận lệnh. Trong mọi trường hợp, hai người đều chịu trách nhiệm như nhau về thao tác.",
+  D: "Mọi thao tác tại vị trí đặt thiết bị điện nhất thứ đều phải có hai người phối hợp thực hiện: Một người giám sát và một người thao tác trực tiếp. Trong mọi trường hợp, hai người đều chịu trách nhiệm như nhau về thao tác.",
+  correct: "D"
+},
+{
+  q: "Theo Thông tư 05/2025/TT-BCT: Đơn vị phát điện có quyền yêu cầu thí nghiệm trong các trường hợp nào? (Chọn các đáp án đúng)",
+  A: "(a) Kiểm tra lại các đặc tính vận hành của tổ máy phát điện đã được hiệu chỉnh sau mỗi lần xảy ra sự cố hư hỏng liên quan đến tổ máy phát điện",
+  B: "(d) Phương án (a), (b).",
+  C: "(c) Khi Đơn vị phân phối điện và Đơn vị phát điện không thống nhất ý kiến về các thông số và đặc tính vận hành của tổ máy phát điện trong kết quả thí nghiệm",
+  D: "(b) Kiểm tra tổ máy phát điện sau khi lắp đặt, sửa chữa lớn, thay thế, cải tiến hoặc lắp ráp lại.",
+  correct: "B"
+},
+{
+  q: "Theo quy định tại Thông tư 06/2025/TT-BCT: Quy định hạn chế thao tác trong các trường hợp nào sau đây? (Chọn các đáp án đúng)",
+  A: "Xử lý sự cố hoặc thời gian giao nhận ca.",
+  B: "Cần phải hạn chế phụ tải để ổn định hệ thống điện.",
+  C: "Đe dọa an toàn đến người hoặc thiết bị.",
+  D: "Giờ có nhu cầu sử dụng điện cao hoặc thời gian giao nhận ca.",
+  correct: "D"
+},
+{
+  q: "Theo Thông tư 06/2025/TT-BCT: Nội dung nào sau đây là không đúng về yêu cầu khi thực hiện lệnh điều độ của nhân viên vận hành cấp dưới?",
+  A: "Nếu không có lý do chính đáng về an toàn mà trì hoãn thực hiện lệnh điều độ của nhân viên vận hành cấp trên thì nhân viên vận hành cấp dưới và đơn vị gây ra sự trì hoãn đó phải chịu hoàn toàn trách nhiệm về hậu quả xảy ra trước pháp luật.",
+  B: "Nhân viên vận hành cấp dưới phải thực hiện ngay và chính xác lệnh điều độ của nhân viên vận hành cấp trên. Trường hợp việc thực hiện lệnh điều độ có thể gây nguy hại đến con người, thiết bị, nhân viên vận hành cấp dưới có quyền chưa thực hiện nhưng phải báo cáo với nhân viên vận hành cấp trên.",
+  C: "Nhân viên vận hành cấp dưới có quyền kiến nghị với lãnh đạo nhân viên vận hành cấp trên khi nhận thấy lệnh điều độ chưa hợp lý. Trong trường hợp kiến nghị không được nhân viên vận hành cấp trên chấp nhận thì vẫn phải thực hiện đúng lệnh điều độ của nhân viên vận hành cấp trên và không phải chịu trách nhiệm về hậu quả.",
+  D: "Nhân viên vận hành cấp dưới có quyền kiến nghị với nhân viên vận hành cấp trên khi nhận thấy lệnh điều độ chưa hợp lý. Trong trường hợp kiến nghị không được nhân viên vận hành cấp trên chấp nhận thì vẫn phải thực hiện đúng lệnh điều độ của nhân viên vận hành cấp trên và không phải chịu trách nhiệm về hậu quả.",
+  correct: "C"
+},
+{
+  q: "Theo Thông tư 06/2025/TT-BCT: Nếu không có quy định riêng, máy biến áp dầu được phép quá tải ngắn hạn 45% trong bao lâu?",
+  A: "120 phút",
+  B: "20 phút",
+  C: "80 phút",
+  D: "45 phút",
+  correct: "C"
+},
+{
+  q: "Theo Thông tư 06/2025/TT-BCT: Phương án nào cho phép đưa tổ máy trở lại vận hành không cần văn bản Đơn vị quản lý vận hành khẳng định máy phát điện đó đủ tiêu chuẩn vận hành?",
+  A: "Bảo vệ mất kích từ.",
+  B: "Bảo vệ chạm đất stator.",
+  C: "Không đáp án nào đúng.",
+  D: "Bảo vệ quá dòng điện áp thấp.",
+  correct: "D"
+},
+{
+  q: "Theo Thông tư 06/2025/TT-BCT: Đối với bảo dưỡng, sửa chữa kéo dài trên 6 ngày, Trường hợp thời gian kết thúc bảo dưỡng, sửa chữa có khả năng muộn hơn so với đăng ký kế hoạch đã được phê duyệt thì Đơn vị phát điện có trách nhiệm gửi Phiếu đăng ký bảo dưỡng, sửa chữa lưới điện điều chỉnh đến Cấp điều độ có quyền điều khiển:",
+  A: "Trước 48 giờ trước khi kết thúc bảo dưỡng, sửa chữa theo kế hoạch ban đầu.",
+  B: "Trước 24 giờ trước khi kết thúc bảo dưỡng, sửa chữa theo kế hoạch ban đầu.",
+  C: "Ngay sau khi xuất hiện các yếu tố dẫn đến kéo dài thời gian kết thúc bảo dưỡng, sửa chữa.",
+  D: "Trước 10 giờ trước khi kết thúc bảo dưỡng, sửa chữa theo kế hoạch ban đầu.",
+  correct: "A"
+},
+{
+  q: "Theo quy định tại Thông tư 06/2025/TT-BCT: Mọi sự thay đổi nội dung thao tác trong phiếu thao tác để phù hợp với sơ đồ kết dây thực tế phải được sự đồng ý của ai?",
+  A: "Được sự đồng ý của người duyệt phiếu và phải ghi vào mục \"Các sự kiện bất thường trong thao tác\" của phiếu thao tác và sổ nhật ký vận hành.",
+  B: "Được sự đồng ý của Điều độ cấp trên và phải ghi vào mục \"Các sự kiện bất thường trong thao tác\" của phiếu thao tác và sổ nhật ký vận hành.",
+  C: "Được sự đồng ý của người ra lệnh và phải ghi vào mục \"Các sự kiện bất thường trong thao tác\" của phiếu thao tác và sổ giao nhận ca.",
+  D: "Được sự đồng ý của người viết phiếu và phải ghi vào mục \"Các sự kiện bất thường trong thao tác\" của phiếu thao tác và sổ giao nhận ca.",
+  correct: "A"
+},
+{
+  q: "Theo quy định tại Thông tư 06/2025/TT-BCT: Phát biểu nào sai: \"Trách nhiệm của đơn vị phát điện là\"",
+  A: "Đảm bảo hoạt động tin cậy của hệ thống điều tốc và kích từ. Thiết lập các hệ thống bảo vệ, điều khiển tự động đáp ứng các yêu cầu theo quy chuẩn ngành và yêu cầu của cấp điều độ có quyền điều khiển để đảm bảo vận hành ổn định hệ thống điện.",
+  B: "Hàng năm, tổ chức diễn tập xử lý sự cố, diễn tập phòng cháy, chữa cháy cho các nhân viên vận hành ít nhất 02 lần; tổ chức diễn tập khởi động đen (đối với nhà máy điện được giao nhiệm vụ khởi động đen), mất điện toàn nhà máy ít nhất 02 lần.",
+  C: "Báo cáo sự cố, hiện tượng bất thường của thiết bị và tình hình khắc phục sự cố cho cấp điều độ có quyền điều khiển theo quy định.",
+  D: "Tuân thủ phương thức vận hành, lệnh điều độ của cấp điều độ có quyền điều khiển.",
+  correct: "B"
+},
+{
+  q: "Theo Thông tư Quy định hệ thống truyền tải điện, phân phối điện và đo đếm điện năng: Nhà máy điện có công suất lắp đặt từ 10MW trở lên (không phân biệt cấp điện áp đấu nối) và Nhà máy điện đấu nối vào lưới điện đã kết nối đến Trung tâm điều khiển phải trang bị Gateway hoặc RTU và thiết lập:",
+  A: "02 kết nối với với hệ thống SCADA của Cấp điều độ có quyền điều khiển và 02 kết nối với hệ thống điều khiển tại Trung tâm điều khiển.",
+  B: "01 kết nối với với hệ thống SCADA của Cấp điều độ có quyền điều khiển và 02 kết nối với hệ thống điều khiển tại Trung tâm điều khiển.",
+  C: "02 kết nối với với hệ thống SCADA của Cấp điều độ có quyền điều khiển và 01 kết nối với hệ thống điều khiển tại Trung tâm điều khiển.",
+  D: "01 kết nối với với hệ thống SCADA của Cấp điều độ có quyền điều khiển và 01 kết nối với hệ thống điều khiển tại Trung tâm điều khiển.",
+  correct: "A"
+},
+{
+  q: "Theo Thông tư 06/2025/TT-BCT: Chức danh tham gia công tác điều độ, vận hành hệ thống điện quốc gia bao gồm:",
+  A: "Điều độ viên tại các cấp điều độ; Kỹ sư phương thức, kỹ sư SCADA/EMS và kỹ sư SCADA/DMS tại các cấp điều độ; Trực ca Năng lượng tái tạo tại Cấp điều độ quốc gia; Trưởng ca nhà máy điện hoặc trung tâm điều khiển nhà máy điện, Trưởng kíp trạm điện hoặc trung tâm điều khiển trạm điện.",
+  B: "Trưởng ca nhà máy điện",
+  C: "Các phương án trên đều đúng.",
+  D: "Trưởng kíp trạm điện",
+  correct: "A"
+},
+{
+  q: "Theo Thông tư 06/2025/TT-BCT: Trường hợp việc điều khiển, thao tác xa không thực hiện được, Đơn vị quản lý vận hành phải:",
+  A: "Cử nhân viên trực thao tác lưu động đến trực tại nhà máy điện hoặc trạm điện trực tiếp thao tác theo lệnh của cấp Điều độ có quyền điều khiển.",
+  B: "Các đáp án trên đều đúng.",
+  C: "Thông báo ngay cho lãnh đạo trực tiếp biết để có biện pháp xử lý.",
+  D: "Thông báo ngay cho cấp điều độ có quyền điều khiển biết và cử nhân viên trực thao tác lưu động đến trực tại nhà máy điện hoặc trạm điện trực tiếp thao tác theo lệnh của cấp Điều độ có quyền điều khiển.",
+  correct: "B"
+},
+{
+  q: "Theo Thông tư 05/2025/TT-BCT: Công suất định mức của máy biến áp được xác định bởi:",
+  A: "Công suất biểu kiến (kVA hoặc MVA).",
+  B: "Công suất tác dụng (kW hoặc MW).",
+  C: "Công suất phản kháng (kVAr).",
+  D: "Tùy theo thiết kế của nhà sản xuất.",
+  correct: "A"
+},
+{
+  q: "Theo Thông tư 05/2025/TT-BCT: Thiết bị nào sau đây thuộc quyền điều khiển của Cấp điều độ miền?",
+  A: "Các máy cắt 220kV tại nhà máy điện thuộc quyền điều khiển của miền.",
+  B: "Các dao cách ly tại trạm biến áp 110kV.",
+  C: "Các thiết bị đầu cuối SCADA.",
+  D: "Các rơ le bảo vệ trung thế.",
+  correct: "B"
+},
+{
+  q: "Theo Thông tư 05/2025/TT-BCT: Khi xảy ra sự cố mất điện toàn trạm, nhân viên vận hành phải ưu tiên thực hiện việc gì trước?",
+  A: "Kiểm tra nguyên nhân sự cố.",
+  B: "Tách các thiết bị ra khỏi hệ thống để tránh hư hỏng khi có điện trở lại.",
+  C: "Báo cáo cấp điều độ và chờ chỉ thị.",
+  D: "Khôi phục điện cho các phụ tải quan trọng.",
+  correct: "B"
+},
+{
+  q: "Theo Thông tư 05/2025/TT-BCT: Chế độ vận hành của lưới điện trung thế thường là:",
+  A: "Trung tính nối đất trực tiếp.",
+  B: "Trung tính cách ly hoặc nối đất qua cuộn dập hồ quang.",
+  C: "Trung tính nối đất qua điện trở thấp.",
+  D: "Tùy thuộc vào quy định của từng khu vực.",
+  correct: "D"
+},
+{
+  q: "Theo Thông tư 05/2025/TT-BCT: Việc thay đổi các trị số chỉnh định của rơ le bảo vệ phải:",
+  A: "Do nhân viên vận hành tự thực hiện khi thấy cần thiết.",
+  B: "Do cấp có quyền điều khiển ra lệnh và thực hiện theo đúng phiếu chỉnh định.",
+  C: "Được sự đồng ý của Trưởng ca nhà máy.",
+  D: "Thực hiện định kỳ hàng tháng.",
+  correct: "B"
+},
+{
+  q: "Theo Thông tư 05/2025/TT-BCT: Kế hoạch bảo dưỡng sửa chữa thiết bị điện hàng năm phải được phê duyệt bởi:",
+  A: "Đơn vị điều độ có thẩm quyền.",
+  B: "Lãnh đạo đơn vị quản lý vận hành.",
+  C: "Cục Điều tiết điện lực.",
+  D: "Tập đoàn Điện lực Việt Nam.",
+  correct: "A"
+},
+{
+  q: "Theo Thông tư 05/2025/TT-BCT: Việc huấn luyện an toàn điện cho nhân viên vận hành được thực hiện:",
+  A: "Định kỳ hàng năm.",
+  B: "Khi mới tuyển dụng.",
+  C: "Khi thay đổi công việc hoặc thiết bị mới.",
+  D: "Cả ba phương án trên.",
+  correct: "D"
+},
+{
+  q: "Theo Thông tư 05/2025/TT-BCT: Phiếu thao tác phải được viết cho:",
+  A: "Các thao tác đơn giản trên lưới hạ thế.",
+  B: "Các thao tác phức tạp từ hai bước trở lên trên thiết bị điện.",
+  C: "Mọi thao tác bất kể đơn giản hay phức tạp.",
+  D: "Chỉ khi có sự cố mới cần viết phiếu.",
+  correct: "C"
+},
+{
+  q: "Theo quy định tại Thông tư 05/2025/TT-BCT: Các loại dao cách ly có trang bị bộ truyền động điện phải:",
+  A: "Phải được khóa cơ khí và khóa điện.",
+  B: "Phải có biển cảnh báo nguy hiểm.",
+  C: "Luôn ở trạng thái có điện điều khiển.",
+  D: "Không được phép thao tác từ xa.",
+  correct: "A"
+},
+{
+  q: "Theo Thông tư 05/2025/TT-BCT: Khi thực hiện lệnh điều độ bằng lời nói, người nhận lệnh phải:",
+  A: "Nhắc lại toàn bộ lệnh và ghi vào sổ nhật ký vận hành.",
+  B: "Chỉ cần xác nhận “Rõ” là đủ.",
+  C: "Thực hiện ngay để đảm bảo tiến độ.",
+  D: "Chờ có văn bản xác nhận mới thực hiện.",
+  correct: "A"
+},
+{
+  q: "Theo Thông tư 05/2025/TT-BCT: Hệ thống bảo vệ rơ le của đường dây 220kV phải đảm bảo:",
+  A: "Có ít nhất hai hệ thống bảo vệ độc lập tác động nhanh.",
+  B: "Có một hệ thống bảo vệ chính và một bảo vệ dự phòng.",
+  C: "Tác động với thời gian trễ 1 giây.",
+  D: "Chỉ cần bảo vệ quá dòng là đủ.",
+  correct: "A"
+},
+{
+  q: "Theo Thông tư 05/2025/TT-BCT: Khi cấp điều độ quốc gia ra lệnh điều độ, nhân viên vận hành tại nhà máy điện phải:",
+  A: "Thực hiện ngay và không được thắc mắc.",
+  B: "Kiểm tra tính phù hợp với quy trình vận hành tại chỗ của nhà máy.",
+  C: "Chỉ thực hiện nếu lãnh đạo nhà máy đồng ý.",
+  D: "Chờ nhân viên trực ca miền xác nhận lại.",
+  correct: "B"
+},
+{
+  q: "Theo Thông tư 05/2025/TT-BCT: Trình tự kiểm tra sau khi thao tác máy cắt bao gồm:",
+  A: "Kiểm tra đèn tín hiệu, vị trí cơ khí và dòng điện qua máy cắt.",
+  B: "Chỉ cần kiểm tra đèn tín hiệu trên bảng điều khiển.",
+  C: "Kiểm tra tiếng động của máy cắt.",
+  D: "Không cần kiểm tra nếu thao tác từ xa qua SCADA.",
+  correct: "A"
+},
+{
+  q: "Điều kiện cần thiết để thực hiện thao tác xa là gì? (Chọn câu đúng nhất)",
+  A: "Hệ thống điều khiển (DCS) và cổng kết nối (Gateway) hoặc thiết bị đầu cuối (RTU) tại trạm điện, nhà máy điện hoạt động tốt.",
+  B: "Chỉ cần có nhân viên vận hành trực tại trạm/nhà máy.",
+  C: "Hệ thống SCADA phải được cập nhật phiên bản mới nhất.",
+  D: "Chỉ cần có kết nối internet.",
+  correct: "A"
+},
+{
+  q: "Theo quy định tại Thông tư 06/2025/TT-BCT: Đơn vị quản lý vận hành được phép ban hành phiếu thao tác mẫu trong các trường hợp nào sau đây? (Chọn các đáp án đúng)",
+  A: "Thao tác tách hoặc đưa vào vận hành máy cắt, dao cách ly, máy biến áp, đường dây.",
+  B: "Thao tác tách hoặc đưa vào vận hành thanh cái, máy biến áp, máy cắt.",
+  C: "Thao tác tách hoặc đưa vào vận hành thanh cái, máy biến áp, đường dây.",
+  D: "Thao tác tách hoặc đưa vào vận hành máy cắt, máy biến áp, đường dây.",
+  correct: "C"
+},
+
 ];
 
 
@@ -2553,18 +2906,11 @@ function restartQuiz() {
   location.reload(); // quay lại menu
 }
 </script>
-<style>
-.note {
-  background-color: #fff3cd;
-  padding: 10px;
-  border-left: 5px solid #ffc107;
-  margin-top: 10px;
-}
-</style>
-
-<div class="note">
-  <strong>Ghi chú:</strong>
-  <p>đáp án được cập nhật lúc 13h46 ngày 29/4/2026 theo phản hồi của mọi người.</p>
-</div>
 </body>
+<div style="text-align:center; margin:20px;">
+    <h2 style="color:#d32f2f;">
+        📚 Chúc mọi người làm bài đạt kết quả cao nhất! 🍀
+    </h2>
+</div>
+
 </html>
