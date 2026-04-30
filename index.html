@@ -48,7 +48,27 @@ body { font-family: Arial; max-width: 800px; margin: auto; }
 }
 </style>
 </head>
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyCujG4PJmjp6xdYxPqcMu8YZD1UbSXpRyM",
+  authDomain: "thi-a3-dakre2-1f6ae.firebaseapp.com",
+  projectId: "thi-a3-dakre2-1f6ae",
+  storageBucket: "thi-a3-dakre2-1f6ae.firebasestorage.app",
+  messagingSenderId: "16880598924",
+  appId: "1:16880598924:web:0c20bbaaa26f9e868820a9",
+  measurementId: "G-PNMCM5QQ3R"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 <body>
 
 <h2>ÔN THI A3-ĐĂKRE2</h2>
@@ -3039,4 +3059,16 @@ window.submitScore = async function () {
 loadLeaderboard();
 </script>
 </body>
+<div id="leaderboard"></div>
+
 </html>
+<button onclick="finishQuiz()">Nộp bài</button>
+
+<script>
+function finishQuiz() {
+  let name = prompt("Nhập tên của bạn:");
+  let score = 28; // thay bằng điểm thật
+  let timeUsed = 320; // thời gian thật
+  saveScore(name, score, timeUsed);
+}
+</script>
