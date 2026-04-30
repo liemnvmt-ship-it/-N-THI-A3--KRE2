@@ -55,6 +55,70 @@ body { font-family: Arial; max-width: 800px; margin: auto; }
 
 <!-- MENU -->
 <div id="menu">
+<script>
+(function(){
+
+function createBox(){
+  let menu = document.getElementById("menu");
+  if(menu && !document.getElementById("bestScoreBox")){
+    let div = document.createElement("div");
+    div.id = "bestScoreBox";
+    div.style = "margin:15px; font-size:18px; color:blue; font-weight:bold;";
+    menu.insertBefore(div, menu.children[1]);
+  }
+}
+
+function showBest(){
+  let best60 = localStorage.getItem("best60") || "0/60";
+  let best280 = localStorage.getItem("best280") || "0/280";
+
+  let box = document.getElementById("bestScoreBox");
+  if(box){
+    box.innerHTML =
+      "🏆 Điểm cao nhất:<br>" +
+      "• 60 câu: " + best60 + "<br>" +
+      "• 343 câu: " + best280;
+  }
+}
+
+function saveBest(score, total){
+  let key = total === 60 ? "best60" : "best280";
+  let old = localStorage.getItem(key);
+
+  if(!old || score > parseInt(old.split("/")[0])){
+    localStorage.setItem(key, score + "/" + total);
+  }
+}
+
+// Hook submit đúng cách
+setTimeout(() => {
+  let oldSubmit = window.submitQuiz;
+
+  window.submitQuiz = function(){
+    if(oldSubmit) oldSubmit();
+
+    setTimeout(() => {
+      let text = document.getElementById("scoreBox").innerText;
+      let match = text.match(/(\d+)\s*\/\s*(\d+)/);
+
+      if(match){
+        saveBest(parseInt(match[1]), parseInt(match[2]));
+        showBest();
+      }
+    }, 50);
+  };
+}, 0);
+
+// init
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    createBox();
+    showBest();
+  }, 100);
+});
+
+})();
+</script>
   <h3>Chọn chế độ làm bài</h3>
   <button onclick="startQuiz(60)">📝 Làm 60 câu</button>
   <button onclick="startQuiz(280)">📚 Làm 343 câu</button>
@@ -2906,11 +2970,6 @@ function restartQuiz() {
   location.reload(); // quay lại menu
 }
 </script>
-</body>
-<div style="text-align:center; margin:20px;">
-    <h2 style="color:#d32f2f;">
-        📚 Chúc mọi người làm bài đạt kết quả cao nhất! 🍀
-    </h2>
 </div>
-
+</body>
 </html>
