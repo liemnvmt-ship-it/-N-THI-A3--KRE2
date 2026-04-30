@@ -2971,5 +2971,72 @@ function restartQuiz() {
 }
 </script>
 </div>
+<script type="module">
+// ===== KẾT NỐI FIREBASE =====
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getFirestore, collection, addDoc, getDocs, query, orderBy, limit } 
+from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyC...",
+  authDomain: "xxxxx.firebaseapp.com",
+  projectId: "xxxxx",
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+// ===== LƯU ĐIỂM =====
+async function saveScore(name, score) {
+  await addDoc(collection(db, "scores"), {
+    name: name,
+    score: score,
+    time: new Date()
+  });
+}
+
+// ===== LOAD BẢNG XẾP HẠNG =====
+async function loadLeaderboard() {
+  const q = query(collection(db, "scores"), orderBy("score", "desc"), limit(10));
+  const snapshot = await getDocs(q);
+
+  let html = "";
+  let rank = 1;
+
+  snapshot.forEach(doc => {
+    const d = doc.data();
+    html += `
+      <tr>
+        <td>${rank++}</td>
+        <td>${d.name}</td>
+        <td>${d.score}</td>
+      </tr>
+    `;
+  });
+
+  document.getElementById("leaderboard").innerHTML = html;
+}
+
+// ===== NÚT NỘP =====
+window.submitScore = async function () {
+  const name = document.getElementById("name").value;
+
+  // ⚠️ bạn phải thay biến này bằng điểm thật của bạn
+  const score = window.finalScore || 0;
+
+  if (!name) {
+    alert("Nhập tên!");
+    return;
+  }
+
+  await saveScore(name, score);
+  alert("Đã lưu!");
+
+  loadLeaderboard();
+}
+
+// Load khi mở trang
+loadLeaderboard();
+</script>
 </body>
 </html>
