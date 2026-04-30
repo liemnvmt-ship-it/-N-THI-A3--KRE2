@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+<h3 id="onlineCount">👥 Online: 0</h3>
 <head>
 <meta charset="UTF-8">
 <title>ÔN THI A3-ĐĂKRE2</title>
@@ -162,6 +163,27 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 const db = firebase.database();
+// ===== ONLINE USER =====
+let userId = Date.now(); // tạo ID riêng
+
+let ref = db.ref("online_users/" + userId);
+
+// ghi trạng thái online
+ref.set(true);
+
+// 🔥 tự xoá khi mất kết nối (quan trọng nhất)
+ref.onDisconnect().remove();
+db.ref("online_users").on("value", snap=>{
+  let data = snap.val();
+
+  let count = 0;
+  if(data){
+    count = Object.keys(data).length;
+  }
+
+  document.getElementById("onlineCount").innerText =
+    "👥 Online: " + count;
+});
 
 // ===== DATA =====
 let originalQuiz = [
