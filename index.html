@@ -3017,9 +3017,7 @@ async function loadLeaderboard() {
   document.getElementById("leaderboard").innerHTML = html;
 }
 
-// ===== NÚT NỘP =====
-window.submitScore = async function () {
-  const name = document.getElementById("name").value;
+
 
   // ⚠️ bạn phải thay biến này bằng điểm thật của bạn
   const score = window.finalScore || 0;
@@ -3042,7 +3040,7 @@ loadLeaderboard();
 <div id="leaderboard"></div>
 
 </html>
-<button onclick="finishQuiz()">Nộp bài</button>
+
 
 <script>
 function finishQuiz() {
