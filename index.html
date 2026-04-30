@@ -4,48 +4,78 @@
 <meta charset="UTF-8">
 <title>ÔN THI A3-ĐĂKRE2</title>
 
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+
 <style>
-body { font-family: Arial; max-width: 800px; margin: auto; }
+body { font-family: Arial; max-width: 1000px; margin: auto; padding:20px; }
 
-.top-panel {
-  position: fixed;
-  top: 10px;
-  right: 20px;
-  text-align: right;
+#menu { text-align:center; }
+
+button{
+  padding:10px 20px;
+  margin:5px;
+  cursor:pointer;
 }
 
-.top-panel button {
-  padding: 10px;
-  margin-left: 5px;
-  font-weight: bold;
+/* ===== BẢNG XẾP HẠNG TRÁI PHẢI ===== */
+#leaderboards{
+  display:flex;
+  gap:20px;
+  margin-top:20px;
 }
 
-#scoreBox {
-  margin-top: 10px;
-  font-size: 18px;
-  font-weight: bold;
-  color: green;
+.lb{
+  flex:1;
+  border:2px solid #ddd;
+  padding:10px;
+  border-radius:10px;
 }
 
-.question {
-  margin: 20px 0;
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
+.lb h3{
+  text-align:center;
 }
 
-.correct { color: green; font-weight: bold; }
-.wrong { color: red; font-weight: bold; }
-
-#menu {
-  text-align: center;
-  margin-top: 100px;
+table{
+  width:100%;
+  border-collapse:collapse;
 }
 
-#menu button {
-  padding: 15px 30px;
-  margin: 10px;
-  font-size: 18px;
+th,td{
+  border:1px solid #ccc;
+  padding:8px;
+  text-align:center;
 }
+
+/* mobile */
+@media(max-width:600px){
+  #leaderboards{
+    flex-direction:column;
+  }
+}
+
+/* quiz */
+.top-bar{
+  position:sticky;
+  top:0;
+  background:white;
+  padding:10px;
+  border-bottom:2px solid #ddd;
+  display:flex;
+  justify-content:flex-start; /* 🔥 đổi dòng này */
+  gap:10px; /* tạo khoảng cách giữa nút */
+}
+
+.question{
+  border:1px solid #ccc;
+  padding:10px;
+  margin:10px 0;
+  border-radius:8px;
+}
+
+.correct{ color:green; font-weight:bold; }
+.wrong{ color:red; font-weight:bold; }
+
 </style>
 </head>
 
@@ -55,86 +85,87 @@ body { font-family: Arial; max-width: 800px; margin: auto; }
 
 <!-- MENU -->
 <div id="menu">
-<script>
-(function(){
 
-function createBox(){
-  let menu = document.getElementById("menu");
-  if(menu && !document.getElementById("bestScoreBox")){
-    let div = document.createElement("div");
-    div.id = "bestScoreBox";
-    div.style = "margin:15px; font-size:18px; color:blue; font-weight:bold;";
-    menu.insertBefore(div, menu.children[1]);
-  }
-}
+<input id="playerName" placeholder="Nhập tên thí sinh..." style="padding:10px;width:250px;">
+<br><br>
 
-function showBest(){
-  let best60 = localStorage.getItem("best60") || "0/60";
-  let best280 = localStorage.getItem("best280") || "0/280";
+<button onclick="startQuiz('60')">📝 Làm 60 câu</button>
+<button onclick="startQuiz('full')">📚 Làm 343 câu</button>
+<button onclick="resetLeaderboard()">🧹 Reset BXH</button>
 
-  let box = document.getElementById("bestScoreBox");
-  if(box){
-    box.innerHTML =
-      "🏆 Điểm cao nhất:<br>" +
-      "• 60 câu: " + best60 + "<br>" +
-      "• 343 câu: " + best280;
-  }
-}
+<!-- ===== BXH ===== -->
+<div id="leaderboards">
 
-function saveBest(score, total){
-  let key = total === 60 ? "best60" : "best280";
-  let old = localStorage.getItem(key);
+  <div class="lb">
+    <h3>🏆 BXH 60 CÂU</h3>
+    <table id="table60">
+      <tr><th>Tên</th><th>Điểm</th></tr>
+    </table>
+  </div>
 
-  if(!old || score > parseInt(old.split("/")[0])){
-    localStorage.setItem(key, score + "/" + total);
-  }
-}
+  <div class="lb">
+    <h3>🏆 BXH 343 CÂU</h3>
+    <table id="tableFull">
+      <tr><th>Tên</th><th>Điểm</th></tr>
+    </table>
+  </div>
 
-// Hook submit đúng cách
-setTimeout(() => {
-  let oldSubmit = window.submitQuiz;
-
-  window.submitQuiz = function(){
-    if(oldSubmit) oldSubmit();
-
-    setTimeout(() => {
-      let text = document.getElementById("scoreBox").innerText;
-      let match = text.match(/(\d+)\s*\/\s*(\d+)/);
-
-      if(match){
-        saveBest(parseInt(match[1]), parseInt(match[2]));
-        showBest();
-      }
-    }, 50);
-  };
-}, 0);
-
-// init
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    createBox();
-    showBest();
-  }, 100);
-});
-
-})();
-</script>
-  <h3>Chọn chế độ làm bài</h3>
-  <button onclick="startQuiz(60)">📝 Làm 60 câu</button>
-  <button onclick="startQuiz(280)">📚 Làm 343 câu</button>
 </div>
 
-<!-- PANEL -->
-<div class="top-panel" style="display:none;" id="panel">
+</div>
+
+<!-- QUIZ -->
+<div id="quizScreen" style="display:none">
+
+<div class="top-bar">
   <button onclick="submitQuiz()">📤 Nộp bài</button>
-  <button onclick="restartQuiz()">🔄 Làm lại</button>
-  <div id="scoreBox"></div>
+  <button onclick="location.reload()">🔄 Làm lại</button>
 </div>
+
+<h3 id="score"></h3>
 
 <div id="quiz"></div>
 
+</div>
+
 <script>
+function resetLeaderboard(){
+
+  // 🔐 mật khẩu (bạn có thể đổi)
+  const PASSWORD = "Liem1711*";
+
+  let pass = prompt("Nhập mật khẩu để reset bảng xếp hạng:");
+
+  if(pass !== PASSWORD){
+    alert("❌ Sai mật khẩu!");
+    return;
+  }
+
+  if(!confirm("⚠️ Bạn có chắc muốn xoá toàn bộ bảng xếp hạng?")){
+    return;
+  }
+
+  // 🗑 xoá dữ liệu Firebase
+  db.ref("leaderboard_60").remove();
+  db.ref("leaderboard_full").remove();
+
+  alert("✅ Đã reset bảng xếp hạng!");
+}
+
+// ===== FIREBASE =====
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "thi-a3-dakre2-1f6ae.firebaseapp.com",
+  databaseURL: "https://thi-a3-dakre2-default-rtdb.asia-southeast1.firebasedatabase.app/",
+  projectId: "thi-a3-dakre2-1f6ae"
+};
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.database();
+
+// ===== DATA =====
 let originalQuiz = [
+
 {
   q: "Theo Thông tư 05/2025/TT-BCT: Tổ máy phát điện của nhà máy thủy điện và nhà máy nhiệt điện có tổng công suất lắp đặt từ 30 MW trở xuống đấu nối vào lưới điện phân phối phải có khả năng phát công suất tác dụng định mức liên tục trong dải tần số của hệ thống điện?",
   A: "48 Hz đến 50 Hz.",
@@ -2879,174 +2910,149 @@ let originalQuiz = [
   D: "Thao tác tách hoặc đưa vào vận hành máy cắt, máy biến áp, đường dây.",
   correct: "C"
 },
-
 ];
 
-
-let quiz = [];
-let userAnswers = {};
-let submitted = false;
-
-function shuffle(array) {
-  return array.sort(() => Math.random() - 0.5);
+// ===== CHUYỂN DATA =====
+function convertData(data){
+  const map={A:0,B:1,C:2,D:3};
+  return data.map(x=>({
+    question:x.q,
+    options:[x.A,x.B,x.C,x.D],
+    answer:map[x.correct]
+  }));
 }
 
-function startQuiz(num) {
-  document.getElementById("menu").style.display = "none";
-  document.getElementById("panel").style.display = "block";
+let questions = convertData(originalQuiz);
 
-  let shuffled = shuffle([...originalQuiz]);
+// ===== BIẾN =====
+let current=[];
+let name="";
+let mode="";
+let answers={};
+let submitted=false;
 
-  if (num === 280) {
-    quiz = shuffled;
-  } else {
-    quiz = shuffled.slice(0, num);
+// ===== START =====
+function startQuiz(m){
+  let n=document.getElementById("playerName").value.trim();
+  if(!n){alert("Nhập tên!");return}
+
+  name=n;
+  mode=m;
+
+  document.getElementById("menu").style.display="none";
+  document.getElementById("quizScreen").style.display="block";
+
+  if(m==="full"){
+    current=[...questions];
+  }else{
+    current=shuffle([...questions]).slice(0,60);
   }
 
-  userAnswers = {};
-  submitted = false;
-  document.getElementById("scoreBox").innerText = "";
+  answers={};
+  submitted=false;
 
-  renderQuiz();
+  render();
 }
 
-function renderQuiz() {
-  let html = "";
+// ===== RENDER =====
+function render(){
+  let html="";
 
-  quiz.forEach((q, index) => {
-    html += `<div class="question"><b>Câu ${index+1}: ${q.q}</b><br>`;
+  current.forEach((q,i)=>{
+    html+=`<div class="question"><b>Câu ${i+1}: ${q.question}</b><br>`;
 
-    ["A","B","C","D"].forEach(ans => {
-      let mark = "";
-      let className = "";
+    q.options.forEach((o,j)=>{
+      let cls="";
+      let mark="";
 
-      if (submitted) {
-        if (q.correct === ans) {
-          mark = " ✔";
-          className = "correct";
-        }
-        if (userAnswers[index] === ans && ans !== q.correct) {
-          mark = " ✘";
-          className = "wrong";
-        }
+      if(submitted){
+        if(j===q.answer){cls="correct";mark="✔"}
+        if(answers[i]===j && j!==q.answer){cls="wrong";mark="✘"}
       }
 
-      html += `
-        <label class="${className}">
-          <input type="radio" name="q${index}" value="${ans}"
-          ${userAnswers[index]===ans ? "checked":""}
-          ${submitted ? "disabled":""}
-          onclick="save(${index},'${ans}')">
-          ${ans}. ${q[ans]} ${mark}
-        </label><br>
-      `;
+      html+=`
+      <label class="${cls}">
+        <input type="radio" name="q${i}" value="${j}"
+        ${answers[i]==j?"checked":""}
+        ${submitted?"disabled":""}
+        onclick="saveAns(${i},${j})">
+        ${["A","B","C","D"][j]}. ${o} ${mark}
+      </label><br>`;
     });
 
-    html += "</div>";
+    html+="</div>";
   });
 
-  document.getElementById("quiz").innerHTML = html;
+  document.getElementById("quiz").innerHTML=html;
 }
 
-function save(index, ans) {
-  userAnswers[index] = ans;
+// ===== SAVE =====
+function saveAns(i,j){
+  answers[i]=j;
 }
 
-function submitQuiz() {
-  submitted = true;
-  let score = 0;
+// ===== SUBMIT =====
+function submitQuiz(){
+  submitted=true;
+  let score=0;
 
-  quiz.forEach((q, index) => {
-    if (userAnswers[index] === q.correct) score++;
+  current.forEach((q,i)=>{
+    if(answers[i]===q.answer) score++;
   });
 
-  document.getElementById("scoreBox").innerHTML =
-    "✅ Điểm: " + score + " / " + quiz.length;
+  document.getElementById("score").innerText=
+    `👤 ${name} | 🎯 ${score}/${current.length}`;
 
-  renderQuiz();
+  saveScore(name,score,current.length);
+
+  render();
 }
 
-function restartQuiz() {
-  location.reload(); // quay lại menu
+// ===== LƯU FIREBASE =====
+function saveScore(n,s,t){
+  let path=(mode==="full")?"leaderboard_full":"leaderboard_60";
+
+  db.ref(path+"/"+Date.now()).set({
+    name:n,
+    score:s,
+    total:t
+  });
 }
+
+// ===== LOAD BXH =====
+db.ref("leaderboard_60").on("value",snap=>{
+  loadTable("table60",snap.val());
+});
+
+db.ref("leaderboard_full").on("value",snap=>{
+  loadTable("tableFull",snap.val());
+});
+
+function loadTable(id,data){
+  let t=document.getElementById(id);
+  t.innerHTML="<tr><th>Tên</th><th>Điểm</th></tr>";
+
+  if(!data) return;
+
+  let arr=Object.values(data);
+
+  arr.sort((a,b)=>(b.score/b.total)-(a.score/a.total));
+
+  arr.slice(0,5).forEach(x=>{
+    t.innerHTML+=`
+    <tr>
+      <td>${x.name}</td>
+      <td>${x.score}/${x.total}</td>
+    </tr>`;
+  });
+}
+
+// ===== SHUFFLE =====
+function shuffle(a){
+  return a.sort(()=>Math.random()-0.5);
+}
+
 </script>
-</div>
-<script type="module">
-// ===== KẾT NỐI FIREBASE =====
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import { getFirestore, collection, addDoc, getDocs, query, orderBy, limit } 
-from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyC...",
-  authDomain: "xxxxx.firebaseapp.com",
-  projectId: "xxxxx",
-};
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-
-// ===== LƯU ĐIỂM =====
-async function saveScore(name, score) {
-  await addDoc(collection(db, "scores"), {
-    name: name,
-    score: score,
-    time: new Date()
-  });
-}
-
-// ===== LOAD BẢNG XẾP HẠNG =====
-async function loadLeaderboard() {
-  const q = query(collection(db, "scores"), orderBy("score", "desc"), limit(10));
-  const snapshot = await getDocs(q);
-
-  let html = "";
-  let rank = 1;
-
-  snapshot.forEach(doc => {
-    const d = doc.data();
-    html += `
-      <tr>
-        <td>${rank++}</td>
-        <td>${d.name}</td>
-        <td>${d.score}</td>
-      </tr>
-    `;
-  });
-
-  document.getElementById("leaderboard").innerHTML = html;
-}
-
-
-
-  // ⚠️ bạn phải thay biến này bằng điểm thật của bạn
-  const score = window.finalScore || 0;
-
-  if (!name) {
-    alert("Nhập tên!");
-    return;
-  }
-
-  await saveScore(name, score);
-  alert("Đã lưu!");
-
-  loadLeaderboard();
-}
-
-// Load khi mở trang
-loadLeaderboard();
-</script>
 </body>
-<div id="leaderboard"></div>
-
 </html>
-
-
-<script>
-function finishQuiz() {
-  let name = prompt("Nhập tên của bạn:");
-  let score = 28; // thay bằng điểm thật
-  let timeUsed = 320; // thời gian thật
-  saveScore(name, score, timeUsed);
-}
-</script>
