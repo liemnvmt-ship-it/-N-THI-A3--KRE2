@@ -3802,7 +3802,7 @@ function loadTable(id,data){
 
   arr.sort((a,b)=>(b.score/b.total)-(a.score/a.total));
 
-  arr.slice(0,10).forEach(x=>{
+  arr.slice(0,30).forEach(x=>{
     t.innerHTML+=`
     <tr>
       <td>${x.name}</td>
